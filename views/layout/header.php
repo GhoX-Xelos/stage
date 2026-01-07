@@ -1,0 +1,64 @@
+<header class="navbar">
+    <div class="logo">
+        <img src="./public/image/logo.png" alt="Logo">
+        <div class="logo-text">
+            <div>Niak Niak</div>
+            <div>Kadric</div>
+        </div>
+    </div>
+
+    <?php
+        $userLoginIcon = './public/image/user-login.svg';
+        $userAddIcon   = './public/image/user-add.svg';
+    ?>
+
+    <nav>
+        <!-- Menu déroulant Accueil -->
+        <div class="dropdown">
+            <button class="dropdown-btn">
+                Accueil <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="index.php?controleur=home&action=presentation">Entreprise</a>
+                <a href="index.php?controleur=home&action=planteFavorite">Favoris</a>
+            </div>
+        </div>
+
+        <a href="#">Plantes</a>
+        <a href="#">Contact</a>
+
+        <div class="user-actions">
+            <?php if (!isset($_SESSION['email'])): ?>
+                <a class="user-btn" href="index.php?controleur=user&action=login">
+                    <img class="user-icon" src="<?= $userLoginIcon ?>" alt="Icône connexion">
+                    <span>Login</span>
+                </a>
+                <a class="user-btn" href="index.php?controleur=user&action=register">
+                    <img class="user-icon" src="<?= $userAddIcon ?>" alt="Icône création de compte">
+                    <span>Sign in</span>
+                </a>
+            <?php else: ?>
+                <span class="user">
+                    <?= htmlspecialchars($_SESSION['email']) ?>
+                </span>
+                <a class="logout-btn" href="index.php?controleur=user&action=logout">Déconnexion</a>
+            <?php endif; ?>
+        </div>
+    </nav>
+</header>
+
+<!-- JS pour le menu déroulant -->
+<script>
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+
+    // Ouvrir le menu au hover sur toute la zone dropdown
+    dropdown.addEventListener('mouseenter', function () {
+        this.classList.add('active');
+    });
+
+    // Fermer le menu quand la souris quitte toute la zone
+    dropdown.addEventListener('mouseleave', function () {
+        this.classList.remove('active');
+    });
+</script>

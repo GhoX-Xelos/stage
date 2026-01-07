@@ -4,7 +4,7 @@ class MySqlDb {
 
     public static function getPdo() {
         if (self::$pdo === null) {
-            $dsn  = 'mysql:host=localhost;dbname=carnet;charset=utf8mb4';
+            $dsn  = 'mysql:host=localhost;dbname=niak;charset=utf8mb4';
             $user = 'root';
             $pass = 'root';
             self::$pdo = new PDO($dsn, $user, $pass);
