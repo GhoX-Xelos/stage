@@ -15,7 +15,7 @@ $reseaux = $stmtReseaux->fetchAll();
 
 <footer class="bg-dark text-light mt-5">
   <div class="container py-4">
-    <div class="row">
+    <div class="row">a
 
       <!-- Navigation -->
       <div class="col-md-4 mb-3">
