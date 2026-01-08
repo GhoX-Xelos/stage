@@ -3,7 +3,7 @@
     height: 90vh;
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.6fr;
+    grid-template-rows: 0.3fr 0.7fr;
     grid-template-areas:
       "carrousel carrousel"
       "presentation objectif"; 
@@ -13,7 +13,23 @@
     margin-bottom: 1rem;
 }
 
-#carrousel { grid-area: carrousel; }
+#carrousel { 
+    grid-area: carrousel; 
+    overflow: hidden;
+}
+
+#carrousel .carousel,
+#carrousel .carousel-inner,
+#carrousel .carousel-item {
+    height: 100%;
+}
+
+#carrousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 #presentation { grid-area: presentation; }
 #objectif { grid-area: objectif; }
 

@@ -55,7 +55,7 @@ $reseaux = $stmtReseaux->fetchAll();
           foreach ($reseaux as $index => $reseau): 
           ?>
             <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="text-light text-decoration-none d-flex align-items-center gap-2 py-2 px-3 rounded hover-social" style="transition: all 0.3s ease;">
-              <img width="28" height="28" src="public/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>">
+              <img width="28" height="28" src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>">
               <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
             </a>
           <?php endforeach; ?>
