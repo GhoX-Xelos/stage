@@ -13,6 +13,7 @@
 
 <main style="padding: 30px;">
     <h1>Bienvenue 👋</h1>
+    <p>Ceci est la page d'accueil de notre site web.</p>
 </main>
 
 <?php include __DIR__ . '/../layout/footer.php'; ?>
