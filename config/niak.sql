@@ -1,8 +1,11 @@
-CREATE DATABASE IF NOT EXISTS niak
-CHARACTER SET utf8mb4
-COLLATE utf8mb4_general_ci;
-
-USE niak;
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1
+-- http://www.phpmyadmin.net
+--
+-- Client :  localhost
+-- Généré le :  Mer 07 Janvier 2026 à 14:26
+-- Version du serveur :  5.6.20-log
+-- Version de PHP :  7.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -93,18 +96,6 @@ CREATE TABLE `utilisateur` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
--- Contenu de la table `utilisateur`
---
-
-INSERT INTO `utilisateur` (`id`, `role`, `nom`, `prenom`, `mdp`, `email`, `tel`) VALUES
-(1, 'admin', 'Courtois', 'Alicia', 'azerty123', 'alicia@gmail.com', '06 06 06 06 06'),
-(2, 'admin', 'Champagnac', 'William', 'azerty123', 'william@gmail.com', '07 07 07 07 07'),
-(3, 'admin', 'Fassetta', 'Cédric', 'azerty123', 'niakniakkadric@gmail.com', '06 86 71 67 75'),
-(4, 'admin', 'Champagnac', 'Christine', 'azerty123', 'meesty@hotmail.com', '06 15 35 89 23 '),
-(5, 'client', 'Pierre', 'Pierre', 'client123', 'pierre@gmail.com', '08 08 08 08 08'),
-(6, 'client ', 'Maud', 'Maud', 'client123', 'maud@gmail.com', '09 09 09 09 09 ');
-
---
 -- Index pour les tables exportées
 --
 
@@ -156,7 +147,7 @@ ALTER TABLE `reseaux`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
