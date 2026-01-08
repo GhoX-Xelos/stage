@@ -2,7 +2,7 @@
 
 .login-container,
 .register-container {
-    max-width: 400px;
+    max-width: 600px;
     margin: 60px auto;
     padding: 40px;
     background: #f9f9f9;
@@ -20,6 +20,14 @@
 
 .form-group {
     margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
 }
 
 .form-group label {
