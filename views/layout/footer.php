@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
 <?php
 // Récupération des informations de contact depuis la base de données
 require_once __DIR__ . '/../../models/Database.php';
@@ -79,3 +91,6 @@ $reseaux = $stmtReseaux->fetchAll();
     </div>
   </div>
 </footer>
+
+</body>
+</html>
