@@ -21,6 +21,21 @@
         
         <form method="POST">
             <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="nom" placeholder="Jacobin" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="prenom">Prenom</label>
+                <input type="prenom" placeholder="Jacobin" id="prenom" name="prenom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tel">numero</label>
+                <input type="tel" placeholder="01 01 01 01 01" id="tel" name="tel" required>
+            </div>
+
+            <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" placeholder="plante@gmail.com" id="email" name="email" required>
             </div>
