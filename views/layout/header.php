@@ -1,4 +1,4 @@
-<header class="navbar">
+<header class="navbar" style="padding-right: 10px;"> 
     <div class="logo">
         <img src="./public/image/logo.png" alt="Logo">
         <div class="logo-text">
