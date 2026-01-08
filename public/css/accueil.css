@@ -1,0 +1,45 @@
+.grid {
+    display: grid;
+    height: 100%;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "carrousel carrousel"
+      "presentation objectif"; 
+    gap: 1rem 1rem;
+    padding: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+#accueil {
+    display: grid;
+    height: calc(100vh - 0px);
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "carrousel carrousel"
+      "presentation objectif"; 
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#carrousel { grid-area: carrousel; }
+#presentation { grid-area: presentation; }
+#objectif { grid-area: objectif; }
+
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+  }
+  
+.block {
+    background:#565656;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    color: white;
+  }

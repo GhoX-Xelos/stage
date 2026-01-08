@@ -26,7 +26,7 @@ $stmtReseaux = $pdo->query("SELECT * FROM reseaux ORDER BY id");
 $reseaux = $stmtReseaux->fetchAll();
 ?>
 
-<footer class="bg-dark text-light mt-5">
+<footer class="bg-dark text-light mt-0">
   <div class="container py-4">
     <div class="row">
 
