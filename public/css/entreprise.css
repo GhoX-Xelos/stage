@@ -1,21 +1,22 @@
-.grid1 {
+.grid3 {
     display: grid;
     height: 90vh;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.4fr 0.6fr;
+    grid-template-columns: 1fr 0.02fr 1fr;
+    grid-template-rows: 0.1fr 0.9fr;
     grid-template-areas:
-      "carrousel carrousel"
-      "presentation objectif"; 
+      "titre titre titre"
+      "presentation1 barre presentation2"; 
     gap: 1rem 1rem;
     padding: 1rem 1rem 0 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
 }
 
-#carrousel { grid-area: carrousel; }
-#presentation { grid-area: presentation; }
-#objectif { grid-area: objectif; }
+#titre { grid-area: titre; }
+#presentation1 { grid-area: presentation1; }
+#barre { grid-area: barre; }
+#presentation2 { grid-area: presentation2; }s
 
 :root{
     --main-radius:5px;

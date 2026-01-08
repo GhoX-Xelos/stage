@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0;
+    padding-top: 80px;
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -18,6 +19,10 @@ main {
 
 /* NAVBAR */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #829633; /* bande verte */
     color: white;
     padding: 8px 15px 8px 10px;

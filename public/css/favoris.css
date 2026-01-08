@@ -1,0 +1,34 @@
+.grid2 {
+    display: grid;
+    height: 90vh;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-areas:
+      "banniere1 banniere1 banniere1"
+      "favoris1 favoris2 favoris3"
+      "banniere2 banniere2 banniere2"; 
+    gap: 1rem 1rem;
+    padding: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+#banniere1 { grid-area: banniere1; }
+#favoris1 { grid-area: favoris1; }
+#favoris2 { grid-area: favoris2; }
+#favoris3 { grid-area: favoris3; }
+#banniere1 { grid-area: banniere1; }
+#banniere2 { grid-area: banniere2; }
+
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+  }
+  
+.block {
+    background:#565656;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    color: white;
+  }
