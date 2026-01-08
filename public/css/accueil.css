@@ -4,7 +4,7 @@
     min-height: calc(100vh - 80px);
     width: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.6fr;
     grid-template-areas:
       "carrousel carrousel"
       "presentation objectif"; 
