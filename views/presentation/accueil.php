@@ -13,7 +13,7 @@
 
 <section class="grid1">
     <div class="block" id="carrousel"> 
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="public/image/carousel1/photo1.jpg" class="d-block w-100" alt="photo1">
