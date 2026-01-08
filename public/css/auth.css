@@ -1,11 +1,22 @@
 /* Styles pour les pages de connexion et d'inscription */
 
-.login-container,
+/* Styles pour la page de CONNEXION (login) */
+.login-container {
+    max-width: 600px;
+    width: 90%;
+    margin: 170px auto 200px auto;
+    padding: 27px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour la page d'INSCRIPTION (sign in) */
 .register-container {
     max-width: 600px;
     width: 90%;
-    margin: 60px auto 320px auto;
-    padding: 40px;
+    margin: 80px auto 50px auto;
+    padding: 27px;
     background: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -15,32 +26,33 @@
 .register-container h2 {
     color: #829633;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .form-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 15px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 5px !important;
     width: 100% !important;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #333;
     font-weight: 600;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
@@ -66,14 +78,14 @@
 .button-group {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-bottom: 12px;
+    margin-top: 15px;
 }
 
 .button-group button,
 .button-group a {
     flex: 1;
-    padding: 12px;
+    padding: 9px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -105,12 +117,12 @@
 .signup-link,
 .login-link {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 12px;
     color: #666;
 }
 
 .signup-link {
-    padding-top: 20px;
+    padding-top: 10px;
     border-top: 1px solid #ddd;
 }
 
@@ -148,6 +160,10 @@
 
 .back-button:hover {
     background-color: #e0e0e0;
+}
+
+footer {
+    margin-top: 0 !important;
 }
 
 @media (max-width: 500px) {
