@@ -39,7 +39,7 @@
   }
   
 .block {
-    background:#565656;
+    background:#4d4d4d;
     border-radius: var(--main-radius);
     padding: var(--main-padding);
     color: white;
