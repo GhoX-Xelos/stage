@@ -39,9 +39,12 @@ switch (strtolower($action)) {
             $email = isset($_POST['email']) ? $_POST['email'] : '';
             $mdp   = isset($_POST['mdp']) ? $_POST['mdp'] : '';
             $confirm_mdp = isset($_POST['confirm_mdp']) ? $_POST['confirm_mdp'] : '';
+            $nom = isset($_POST['nom']) ? trim($_POST['nom']) : '';
+            $prenom = isset($_POST['prenom']) ? trim($_POST['prenom']) : '';
+            $tel = isset($_POST['tel']) ? trim($_POST['tel']) : '';
 
             // Validation des champs
-            if (empty($email) || empty($mdp) || empty($confirm_mdp)) {
+            if (empty($email) || empty($mdp) || empty($confirm_mdp) || empty($nom) || empty($prenom) || empty($tel)) {
                 $message = "Tous les champs sont obligatoires.";
             } elseif ($mdp !== $confirm_mdp) {
                 $message = "Les mots de passe ne correspondent pas.";
@@ -52,7 +55,7 @@ switch (strtolower($action)) {
                 if ($user) {
                     $message = "Cet email est déjà utilisé.";
                 } else {
-                    $userModel->createUser($email, $mdp);
+                    $userModel->createUser($email, $mdp, $nom, $prenom, $tel);
                     $_SESSION['email'] = $email;
                     header('Location: index.php');
                     exit;

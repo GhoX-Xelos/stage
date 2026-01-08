@@ -15,17 +15,18 @@ class UserModel {
         return $stmt->fetch();
     }
 
-    public function createUser($email, $password, $nom = '', $prenom = '') {
+    public function createUser($email, $password, $nom = '', $prenom = '', $tel = '') {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO utilisateur (email, mdp, nom, prenom, role) VALUES (:email, :mdp, :nom, :prenom, :role)";
+        $sql = "INSERT INTO utilisateur (email, mdp, nom, prenom, tel, role) VALUES (:email, :mdp, :nom, :prenom, :tel, :role)";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([
             'email' => $email,
             'mdp' => $hash,
             'nom' => $nom,
             'prenom' => $prenom,
-            'role' => 'user'
+            'tel' => $tel,
+            'role' => 'client'
         ]);
     }
 
