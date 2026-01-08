@@ -26,6 +26,11 @@
     </div>
   </div>
 </div>
+        <!-- Contenu superposé -->
+        <div class="carousel-overlay">
+            <h1 class="carousel-title">Niak Niak Kadric</h1>
+            <a href="index.php?controleur=plante&action=index" class="carousel-btn">Découvrir nos plantes</a>
+        </div>
     </div>
     <div class="block" id="presentation"> </div>
     <div class="block" id="objectif"> </div>
