@@ -3,7 +3,8 @@
 .login-container,
 .register-container {
     max-width: 600px;
-    margin: 60px auto;
+    width: 90%;
+    margin: 60px auto 320px auto;
     padding: 40px;
     background: #f9f9f9;
     border-radius: 8px;
