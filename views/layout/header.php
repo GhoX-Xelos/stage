@@ -1,11 +1,13 @@
 <header class="navbar" style="padding-right: 10px;"> 
-    <div class="logo">
-        <img src="./public/image/logo.png" alt="Logo">
-        <div class="logo-text">
-            <div>Niak Niak</div>
-            <div>Kadric</div>
+    <a href="index.php" style="text-decoration: none; color: inherit;">
+        <div class="logo">
+            <img src="./public/image/logo.png" alt="Logo">
+            <div class="logo-text">
+                <div>Niak Niak</div>
+                <div>Kadric</div>
+            </div>
         </div>
-    </div>
+    </a>
 
     <?php
         $userLoginIcon = './public/image/user-login.svg';
@@ -15,12 +17,12 @@
     <nav>
         <!-- Menu déroulant Accueil -->
         <div class="dropdown">
-            <button class="dropdown-btn">
+            <a href="index.php" class="dropdown-btn" style="text-decoration: none;">
                 Accueil <span class="arrow">▼</span>
-            </button>
+            </a>
             <div class="dropdown-menu">
-                <a href="index.php?controleur=home&action=presentation">Entreprise</a>
-                <a href="index.php?controleur=home&action=planteFavorite">Favoris</a>
+                <a href="./views/presentation/entreprise.php">Entreprise</a>
+                <a href="./views/presentation/favoris.php">Favoris</a>
             </div>
         </div>
 

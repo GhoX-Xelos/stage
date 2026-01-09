@@ -34,10 +34,11 @@ $reseaux = $stmtReseaux->fetchAll();
       <div class="col-md-4 mb-3">
         <h5>Navigation</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-light text-decoration-none">Accueil</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Joueurs</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Coachs</a></li>
-          <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+          <li><a href="index.php" class="text-light text-decoration-none nav-footer-link">Accueil</a></li>
+          <li><a href="./views/presentation/entreprise.php" class="text-light text-decoration-none nav-footer-link">Entreprise</a></li>
+          <li><a href="./views/presentation/favoris.php" class="text-light text-decoration-none nav-footer-link">Favoris</a></li>
+          <li><a href="index.php?controleur=plante&action=plantes" class="text-light text-decoration-none nav-footer-link">Plantes</a></li>
+          <li><a href="#" class="text-light text-decoration-none nav-footer-link">Contact</a></li>
         </ul>
       </div>
 
@@ -64,6 +65,49 @@ $reseaux = $stmtReseaux->fetchAll();
           .hover-social:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateX(5px);
+          }
+          
+          .nav-footer-link {
+            display: inline-block;
+            padding: 5px 0;
+            position: relative;
+            transition: all 0.3s ease;
+          }
+          
+          .nav-footer-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 3px;
+            left: 0;
+            background-color: #fff;
+            transition: width 0.3s ease;
+          }
+          
+          .nav-footer-link:hover {
+            color: #ffffff !important;
+            padding-left: 8px;
+          }
+          
+          .nav-footer-link:hover::after {
+            width: 100%;
+          }
+          
+          footer h5 {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+          }
+          
+          footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #fff;
           }
         </style>
       </div>
