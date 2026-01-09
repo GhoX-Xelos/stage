@@ -5,10 +5,10 @@
     <title>Niak Niak Kadric</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/accueil.css">
-    <link rel="stylesheet" href="./public/css/favoris.css">
-    <link rel="stylesheet" href="./public/css/entreprise.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="./public/css/accueil.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="./public/css/favoris.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="./public/css/entreprise.css?v=<?= time() ?>">
 </head>
 <body>
 

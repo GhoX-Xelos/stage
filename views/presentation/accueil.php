@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entreprise - Niak Niak Kadric</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/accueil.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="./public/css/accueil.css?v=<?= time() ?>">
 </head>
 <body>
 
@@ -32,7 +32,17 @@
             <a href="index.php?controleur=plante&action=index" class="carousel-btn">Découvrir nos plantes</a>
         </div>
     </div>
-    <div class="block" id="presentation"> </div>
+    <div class="block" id="presentation">
+        <div class="presentation-content">
+            <h2>À propos de Niak Niak Kadric</h2>
+            <p>
+                Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes de qualité. 
+                Passionnés par la nature et l'environnement, nous nous engageons à offrir à nos clients une large 
+                sélection de plantes adaptées à tous les espaces et tous les besoins. Notre expertise et notre amour 
+                pour le monde végétal nous permettent de vous accompagner dans vos projets de jardinage et de décoration.
+            </p>
+        </div>
+    </div>
     <div class="block" id="objectif"> </div>
 </section>
 
