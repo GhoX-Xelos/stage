@@ -43,7 +43,19 @@
             </p>
         </div>
     </div>
-    <div class="block" id="objectif"> </div>
+    <div class="block" id="objectif">
+        <div class="objectif-content">
+            <h2>Nos Objectifs</h2>
+            <div class="objectif-item">
+                <h3>Objectif 1</h3>
+                <p>Votre texte ici...</p>
+            </div>
+            <div class="objectif-item">
+                <h3>Objectif 2</h3>
+                <p>Votre texte ici...</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
