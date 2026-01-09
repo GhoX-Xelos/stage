@@ -2,8 +2,8 @@
     display: grid;
     height: 90vh;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.7fr;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.4fr 0.6fr;
     grid-template-areas:
       "carrousel carrousel"
       "presentation objectif"; 
@@ -105,6 +105,24 @@
 
 .presentation-content {
     max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.presentation-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.presentation-img {
+    width: 35px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-top: -0.8rem;
 }
 
 .presentation-content h2 {
@@ -115,6 +133,7 @@
     font-family: 'Poppins', sans-serif;
     position: relative;
     padding-bottom: 0.8rem;
+    flex-basis: 100%;
 }
 
 .presentation-content h2::after {
@@ -144,7 +163,7 @@
     align-items: center;
     justify-content: center;
     padding: 2.5rem 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
 }
 
 .objectif-content {
@@ -204,7 +223,7 @@
   }
   
 .block {
-    background:#7a7a7a;
+    /* background:#7a7a7a; */
     border-radius: var(--main-radius);
     padding: var(--main-padding);
     color: white;

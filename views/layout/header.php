@@ -27,7 +27,7 @@
         </div>
 
         <a href="index.php?controleur=plante&action=plantes">Plantes</a>
-        <a href="#">Contact</a>
+        <a href="index.php?controleur=contact&action=index">Contact</a>
 
         <div class="user-actions">
             <?php if (!isset($_SESSION['email'])): ?>
