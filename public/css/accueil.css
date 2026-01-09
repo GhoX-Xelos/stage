@@ -2,8 +2,8 @@
     display: grid;
     height: 90vh;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.7fr;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-rows: 0.4fr 0.6fr;
     grid-template-areas:
       "carrousel carrousel"
       "presentation objectif"; 
@@ -144,7 +144,7 @@
     align-items: center;
     justify-content: center;
     padding: 2.5rem 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
 }
 
 .objectif-content {
@@ -204,7 +204,7 @@
   }
   
 .block {
-    background:#7a7a7a;
+    /* background:#7a7a7a; */
     border-radius: var(--main-radius);
     padding: var(--main-padding);
     color: white;
