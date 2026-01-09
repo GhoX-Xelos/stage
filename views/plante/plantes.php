@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/plantes.css">
-    <title>Description Plante</title>
+    <title>Nos Plantes</title>
 </head>
 <body>
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
-    <section class="grid5">
-        <div class="block" id="image-plante"> </div>
-        <div class="block" id="nom-plante"> </div>
-        <div class="block" id="description-plante"> </div>
-    </section>
+<section class="grid4">
+    <div class="block" id="titre-plante"> </div>
+    <div class="block" id="filtre"> </div>
+    <div class="block" id="recherche"> </div>
+    <div class="block" id="plantes"> </div>
+</section>
 
 <?php include __DIR__ . '/../layout/footer.php'; ?>
 </body>
