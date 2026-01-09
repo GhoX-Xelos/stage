@@ -47,8 +47,11 @@
         </div>
     </div>
     <div class="block" id="objectif">
+        <div class="objectif-img-wrapper">
+            <img src="./public/image/accueil/plante-accueil1.jpg" alt="Objectifs" class="objectif-img">
+            <h2>Nos<br>Objectifs</h2>
+        </div>
         <div class="objectif-content">
-            <h2>Nos Objectifs</h2>
             <div class="objectif-item">
                 <h3>Objectif 1</h3>
                 <p>Votre texte ici...</p>
@@ -60,6 +63,8 @@
         </div>
     </div>
 </section>
+
+<div class="divider-line"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

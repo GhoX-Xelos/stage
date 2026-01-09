@@ -7,14 +7,21 @@
     grid-template-areas:
       "carrousel carrousel"
       "presentation objectif"; 
-    gap: 1rem 1rem;
-    padding: 1rem 1rem 0 1rem;
+    gap: 1rem 10rem;
+    padding: 0 1rem 0 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
+    margin-top: -15px;
 }
 
 .grid1 #carrousel {
-    margin: -1rem -1rem 0 -1rem;
+    margin: 0 -1rem 0 -1rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
 #carrousel { grid-area: carrousel; }
@@ -99,7 +106,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 2.5rem;
+    padding: 1.5rem 5rem;
+    margin: 2rem 1rem 3rem 50px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
@@ -158,27 +166,70 @@
 /* Section Objectifs */
 #objectif { 
     grid-area: objectif;
-    background: #ffffff;
+    background: transparent;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2.5rem 2rem;
-    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25); */
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 0;
+    position: relative;
+}
+
+.objectif-img {
+    width: 250px;
+    height: 395px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin: auto 0;
+    position: relative;
 }
 
 .objectif-content {
-    max-width: 550px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #ffffff;
+    height: 395px;
+    padding: 2rem 0rem 2rem 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 2.1rem 50px 1.5rem 0;
+    flex: 1;
 }
 
-.objectif-content h2 {
+.objectif-img-wrapper {
+    position: relative;
+    width: 250px;
+    height: 395px;
+    margin: 2.1rem 0 auto 0;
+}
+
+.objectif-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.objectif-img-wrapper h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.8rem;
     font-weight: 600;
-    color: #2b4113;
-    margin-bottom: 1.5rem;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    position: relative;
-    padding-bottom: 0.8rem;
+    z-index: 10;
+    margin: 0;
+    text-align: center;
 }
 
 .objectif-content h2::after {
@@ -215,6 +266,14 @@
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
     margin: 0;
+}
+
+.divider-line {
+    width: calc(100% - 100px);
+    height: 5px;
+    background-color: #829633;
+    margin: -1.5rem auto 0;
+     border-radius: 5px;
 }
 
 :root{
