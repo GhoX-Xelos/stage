@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <a href="#">Plantes</a>
+        <a href="index.php?controleur=plante&action=plantes">Plantes</a>
         <a href="#">Contact</a>
 
         <div class="user-actions">

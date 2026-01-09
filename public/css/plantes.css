@@ -1,0 +1,33 @@
+    .grid4 {
+    display: grid;
+    height: 90vh;
+    width: 100%;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.1fr  0.05fr 1fr;
+    grid-template-areas:
+      "titre-plante titre-plante"
+      "filtre recherche"
+      "filtre plantes"; 
+    gap: 1rem 1rem;
+    padding: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+#titre-plante { grid-area: titre-plante; }
+#filtre { grid-area: filtre; }
+#recherche { grid-area: recherche; }
+#plantes { grid-area: plantes; }
+
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+  }
+  
+.block {
+    background:#565656;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    color: white;
+  }
+    
