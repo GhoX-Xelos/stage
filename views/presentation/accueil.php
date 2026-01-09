@@ -34,7 +34,10 @@
     </div>
     <div class="block" id="presentation">
         <div class="presentation-content">
-            <h2>À propos de Niak Niak Kadric</h2>
+            <div class="presentation-header">
+                <img src="./public/image/plante1.png" alt="Plante" class="presentation-img">
+                <h2>À propos de Niak Niak Kadric</h2>
+            </div>
             <p>
                 Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes de qualité. 
                 Passionnés par la nature et l'environnement, nous nous engageons à offrir à nos clients une large 
