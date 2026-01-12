@@ -130,7 +130,7 @@
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-    margin-top: -0.8rem;
+    margin-top: 0.5rem;
 }
 
 .presentation-content h2 {
