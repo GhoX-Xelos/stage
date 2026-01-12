@@ -15,12 +15,47 @@
     margin-top: 4rem;
 }
 
-#banniere1 { grid-area: banniere1; }
-#favoris1 { grid-area: favoris1; }
-#favoris2 { grid-area: favoris2; }
-#favoris3 { grid-area: favoris3; }
-#banniere1 { grid-area: banniere1; }
-#banniere2 { grid-area: banniere2; }
+#banniere1 { 
+    grid-area: banniere1;
+    background: #829633 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#favoris1 { 
+    grid-area: favoris1;
+    background: #ffffff !important;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#favoris2 { 
+    grid-area: favoris2;
+    background: #ffffff !important;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#favoris3 { 
+    grid-area: favoris3;
+    background: #ffffff !important;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+#banniere2 { 
+    grid-area: banniere2;
+    background: #829633 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
 
 :root{
     --main-radius:5px;
@@ -39,6 +74,12 @@
     .grid2 {
         gap: 1rem 0.8rem;
     }
+    
+    #favoris1,
+    #favoris2,
+    #favoris3 {
+        padding: 1.3rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -53,6 +94,12 @@
         height: auto;
         gap: 1.5rem;
         margin-top: 2rem;
+    }
+    
+    #favoris1,
+    #favoris2,
+    #favoris3 {
+        padding: 1.2rem;
     }
 }
 
@@ -69,6 +116,12 @@
         gap: 1rem;
         margin-top: 1rem;
     }
+    
+    #favoris1,
+    #favoris2,
+    #favoris3 {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -77,11 +130,33 @@
         gap: 0.75rem;
         margin-top: 0.5rem;
     }
+    
+    #favoris1,
+    #favoris2,
+    #favoris3 {
+        padding: 0.8rem;
+    }
+    
+    #banniere1,
+    #banniere2 {
+        padding: 0.8rem;
+    }
 }
 
 @media (max-width: 360px) {
     .grid2 {
         padding: 0.5rem 0.1rem;
         gap: 0.5rem;
+    }
+    
+    #favoris1,
+    #favoris2,
+    #favoris3 {
+        padding: 0.6rem;
+    }
+    
+    #banniere1,
+    #banniere2 {
+        padding: 0.6rem;
     }
 }

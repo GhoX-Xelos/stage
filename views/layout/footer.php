@@ -109,6 +109,70 @@ $reseaux = $stmtReseaux->fetchAll();
             height: 2px;
             background-color: #fff;
           }
+          
+          /* Responsive pour le footer */
+          @media (max-width: 768px) {
+            footer .container {
+              padding: 1.5rem !important;
+            }
+            
+            footer h5 {
+              font-size: 1.1rem;
+              margin-bottom: 12px;
+            }
+            
+            footer p,
+            footer li {
+              font-size: 0.9rem;
+            }
+            
+            footer .col-md-4 {
+              margin-bottom: 1.5rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            footer .container {
+              padding: 1rem !important;
+            }
+            
+            footer h5 {
+              font-size: 1rem;
+              margin-bottom: 10px;
+            }
+            
+            footer p,
+            footer li {
+              font-size: 0.85rem;
+            }
+            
+            footer .col-md-4 {
+              margin-bottom: 1.2rem !important;
+            }
+            
+            footer .small {
+              font-size: 0.8rem !important;
+            }
+          }
+          
+          @media (max-width: 360px) {
+            footer .container {
+              padding: 0.8rem !important;
+            }
+            
+            footer h5 {
+              font-size: 0.95rem;
+            }
+            
+            footer p,
+            footer li {
+              font-size: 0.8rem;
+            }
+            
+            footer .small {
+              font-size: 0.75rem !important;
+            }
+          }
         </style>
       </div>
 

@@ -13,9 +13,33 @@
     margin-bottom: 1rem;
 }
 
-#nom-plante { grid-area: nom-plante; }
-#image-plante { grid-area: image-plante; }
-#description-plante { grid-area: description-plante; }
+#nom-plante { 
+    grid-area: nom-plante;
+    background: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+#image-plante { 
+    grid-area: image-plante;
+    background: #ffffff !important;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#description-plante { 
+    grid-area: description-plante;
+    background: #ffffff !important;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
 
 :root{
     --main-radius:5px;
@@ -48,12 +72,24 @@
         height: auto;
         gap: 1.5rem;
     }
+    
+    #nom-plante,
+    #image-plante,
+    #description-plante {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
     .grid5 {
         padding: 0.5rem;
         gap: 1rem;
+    }
+    
+    #nom-plante,
+    #image-plante,
+    #description-plante {
+        padding: 1.2rem;
     }
 }
 
@@ -62,12 +98,24 @@
         padding: 0.25rem;
         gap: 0.75rem;
     }
+    
+    #nom-plante,
+    #image-plante,
+    #description-plante {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 360px) {
     .grid5 {
         padding: 0.5rem 0.1rem;
         gap: 0.5rem;
+    }
+    
+    #nom-plante,
+    #image-plante,
+    #description-plante {
+        padding: 0.8rem;
     }
 }
     

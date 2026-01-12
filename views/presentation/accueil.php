@@ -39,7 +39,7 @@
                 <h2>À propos de Niak Niak Kadric</h2>
             </div>
             <p>
-                Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes de qualité. 
+                Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. 
                 Passionnés par la nature et l'environnement, nous nous engageons à offrir à nos clients une large 
                 sélection de plantes adaptées à tous les espaces et tous les besoins. Notre expertise et notre amour 
                 pour le monde végétal nous permettent de vous accompagner dans vos projets de jardinage et de décoration.
