@@ -31,13 +31,17 @@
     color: white;
 }
 
+#titre-plante.block {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
 /* Titre de la page */
 #titre-plante {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff !important;
-    color: #000000 !important;
 }
 
 #titre-plante h1 {
