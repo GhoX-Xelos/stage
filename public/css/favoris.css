@@ -1,6 +1,6 @@
 .grid2 {
     display: grid;
-    height: 90vh;
+    height: calc(100vh - 80px);
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.8fr 0.1fr;
@@ -12,6 +12,7 @@
     padding: 1rem 1rem 0 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
+    margin-top: 4rem;
 }
 
 #banniere1 { grid-area: banniere1; }
