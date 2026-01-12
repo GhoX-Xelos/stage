@@ -1,6 +1,6 @@
 .grid1 {
     display: grid;
-    height: 90vh;
+    height: calc(100vh - 80px);
     width: 100%;
     grid-template-columns: 0.4fr 0.6fr;
     grid-template-rows: 0.4fr 0.6fr;
@@ -11,7 +11,7 @@
     padding: 0 1rem 0 1rem;
     box-sizing: border-box;
     margin-bottom: 1rem;
-    margin-top: -15px;
+    margin-top: 4rem;
 }
 
 .grid1 #carrousel {
