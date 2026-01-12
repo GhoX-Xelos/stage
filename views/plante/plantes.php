@@ -6,6 +6,51 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/css/plantes.css">
     <title>Nos Plantes</title>
+    <style>
+        .espece-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: #000;
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+            padding: 3px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .espece-label:hover {
+            background-color: #f0f0f0;
+        }
+        .espece-check {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #4a4a4a;
+            border-radius: 3px;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            background: #fff;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .espece-check:checked {
+            background-color: #000 !important;
+            border-color: #000 !important;
+        }
+        .espece-check:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 1;
+        }
+    </style>
 </head>
 <body>
 <?php include __DIR__ . '/../layout/header.php'; ?>
@@ -14,9 +59,9 @@
     <div class="block" id="titre-plante"> 
         <h1>Nos Plantes</h1>
     </div>
-    <div class="block" id="filtre" style="padding: 15px !important; overflow-y: auto; background: #fff !important; color: #000 !important;">
-        <h3 style="margin: 0 0 15px 0; color: #2b4113; font-size: 1.1rem;">Filtrer par espèce</h3>
-        <form method="GET" style="display: flex; flex-direction: column; gap: 10px;">
+    <div class="block" id="filtre" style="padding: 10px !important; overflow-y: visible; background: #fff !important; color: #000 !important;">
+        <h3 style="margin: 0 0 8px 0; color: #2b4113; font-size: 1.4rem; padding-bottom: 6px; border-bottom: 2px solid #829633;">Filtrer par espèce</h3>
+        <form method="GET" style="display: flex; flex-direction: column; gap: 4px;">
             <input type="hidden" name="controleur" value="plante">
             <input type="hidden" name="action" value="plantes">
             <?php if (isset($_GET['search'])): ?>
@@ -29,20 +74,20 @@
             sort($especes);
             ?>
             
-            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #000;">
-                <input type="checkbox" name="espece[]" value=""> 
-                <span>Toutes les espèces</span>
+            <label class="espece-label">
+                <input type="checkbox" name="espece[]" value="" class="espece-check"> 
+                <span style="font-size: 1.25rem; color: #000; font-weight: normal;">Toutes les espèces</span>
             </label>
             
             <?php foreach ($especes as $espece): ?>
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #000;">
-                    <input type="checkbox" name="espece[]" value="<?= htmlspecialchars($espece) ?>" 
+                <label class="espece-label">
+                    <input type="checkbox" name="espece[]" value="<?= htmlspecialchars($espece) ?>" class="espece-check"
                         <?= (isset($_GET['espece']) && in_array($espece, $_GET['espece'])) ? 'checked' : '' ?>>
-                    <span style="font-size: 0.9rem; color: #000;"><?= htmlspecialchars($espece) ?></span>
+                    <span style="font-size: 1.15rem; color: #000; font-weight: normal;"><?= htmlspecialchars($espece) ?></span>
                 </label>
             <?php endforeach; ?>
             
-            <button type="submit" style="margin-top: 15px; padding: 10px; background: #829633; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">Confirmer</button>
+            <button type="submit" style="margin-top: 15px; padding: 8px; background: #829633; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">Confirmer</button>
             
             <?php if (!empty($_GET['espece']) && !in_array('', $_GET['espece'])): ?>
                 <a href="index.php?controleur=plante&action=plantes" style="display: block; padding: 8px; background: #ccc; color: #333; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; text-align: center; text-decoration: none;">Réinitialiser</a>
@@ -63,13 +108,15 @@
         ?>
             <?php foreach ($plantes as $plante): ?>
                 <div class="plante-card" style="width: calc(20% - 12px); flex-basis: calc(20% - 12px); flex-shrink: 0; flex-grow: 0; min-height: 420px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
-                    <?php if (!empty($plante['image'])): ?>
-                        <img src="<?= htmlspecialchars($plante['image']) ?>" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 100%; height: 180px; object-fit: cover;">
-                    <?php else: ?>
-                        <img src="./public/image/placeholder.jpg" alt="Image non disponible" class="plante-image" style="width: 100%; height: 180px; object-fit: cover;">
-                    <?php endif; ?>
+                    <div style="padding: 16px; box-sizing: border-box;">
+                        <?php if (!empty($plante['image'])): ?>
+                            <img src="./public/image/carousel1/photo3.jpg" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 8px;">
+                        <?php else: ?>
+                            <img src="./public/image/carousel1/photo3.jpg" alt="Image non disponible" class="plante-image" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 8px;">
+                        <?php endif; ?>
+                    </div>
                     
-                    <div class="plante-info" style="padding: 12px; display: flex; flex-direction: column; flex: 1;">
+                    <div class="plante-info" style="padding: 12px 16px; display: flex; flex-direction: column; flex: 1;">
                         <h3 class="plante-nom" style="margin: 0 0 8px 0; font-size: 1.1rem; color: #2b4113;"><?= htmlspecialchars($plante['nom']) ?></h3>
                         <p class="plante-espece" style="margin: 0 0 8px 0; font-size: 0.85rem;"><strong style="color: #829633;">Espèce:</strong> <?= htmlspecialchars($plante['espece']) ?></p>
                         
