@@ -94,7 +94,7 @@
             <?php endif; ?>
         </form>
     </div>
-    <div class="block" id="recherche" style="padding: 10px !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important;">
+    <div class="block" id="recherche" style="padding: 0 !important; background: transparent !important; color: inherit !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important;">
         <form method="GET" style="width: 100%; display: flex; gap: 10px;">
             <input type="hidden" name="controleur" value="plante">
             <input type="hidden" name="action" value="plantes">
@@ -108,7 +108,7 @@
         ?>
             <?php foreach ($plantes as $plante): ?>
                 <div class="plante-card" style="width: calc(20% - 12px); flex-basis: calc(20% - 12px); flex-shrink: 0; flex-grow: 0; min-height: 420px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
-                    <div style="padding: 16px; box-sizing: border-box;">
+                    <div style="padding: 12px 16px 6px 16px; box-sizing: border-box;">
                         <?php if (!empty($plante['image'])): ?>
                             <img src="./public/image/carousel1/photo3.jpg" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 8px;">
                         <?php else: ?>
@@ -116,7 +116,7 @@
                         <?php endif; ?>
                     </div>
                     
-                    <div class="plante-info" style="padding: 12px 16px; display: flex; flex-direction: column; flex: 1;">
+                    <div class="plante-info" style="padding: 8px 16px 12px 16px; display: flex; flex-direction: column; flex: 1;">
                         <h3 class="plante-nom" style="margin: 0 0 8px 0; font-size: 1.1rem; color: #2b4113;"><?= htmlspecialchars($plante['nom']) ?></h3>
                         <p class="plante-espece" style="margin: 0 0 8px 0; font-size: 0.85rem;"><strong style="color: #829633;">Espèce:</strong> <?= htmlspecialchars($plante['espece']) ?></p>
                         
