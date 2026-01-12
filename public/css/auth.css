@@ -166,15 +166,110 @@ footer {
     margin-top: 0 !important;
 }
 
-@media (max-width: 500px) {
+/* Media Queries pour tous types d'écran */
+@media (max-width: 1400px) {
     .login-container,
     .register-container {
-        margin: 40px 20px;
-        padding: 30px 20px;
+        max-width: 550px;
     }
+}
 
+@media (max-width: 992px) {
+    .login-container {
+        margin: 12rem auto 200px auto;
+    }
+    
+    .register-container {
+        margin: 7rem auto 70px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container,
+    .register-container {
+        max-width: 500px;
+        width: 95%;
+        padding: 24px;
+    }
+    
+    .login-container {
+        margin: 10rem auto 150px auto;
+    }
+    
+    .register-container {
+        margin: 6rem auto 50px auto;
+    }
+    
+    .login-container h2,
+    .register-container h2 {
+        font-size: 28px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container,
+    .register-container {
+        padding: 20px;
+    }
+    
+    .login-container h2,
+    .register-container h2 {
+        font-size: 24px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group button,
+    .button-group a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container,
+    .register-container {
+        width: 100%;
+        margin: 8rem 10px 100px 10px;
+        padding: 18px;
+    }
+    
+    .login-container h2,
+    .register-container h2 {
+        font-size: 22px;
+    }
+    
+    .form-group input {
+        font-size: 13px;
+        padding: 9px;
+    }
+}
+
+@media (max-width: 360px) {
+    .login-container,
+    .register-container {
+        padding: 15px;
+    }
+    
     .login-container h2,
     .register-container h2 {
         font-size: 20px;
+    }
+    
+    .form-group input {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .button-group button,
+    .button-group a {
+        font-size: 13px;
+        padding: 8px;
     }
 }

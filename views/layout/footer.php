@@ -165,7 +165,7 @@ $reseaux = $stmtReseaux->fetchAll();
   }
   
   .scroll-top-btn:hover {
-    background-color: #218838;
+    background-color: #9db042;
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
@@ -183,6 +183,35 @@ $reseaux = $stmtReseaux->fetchAll();
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  
+  /* Responsive pour le bouton retour en haut */
+  @media (max-width: 768px) {
+    .scroll-top-btn {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+    }
+    
+    .scroll-top-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .scroll-top-btn {
+      bottom: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .scroll-top-btn svg {
+      width: 18px;
+      height: 18px;
     }
   }
 </style>
