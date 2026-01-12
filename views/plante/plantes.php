@@ -10,7 +10,7 @@
 <body>
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
-<section class="grid4">
+<section class="grid4" style ="margin-top: 65px;">
     <div class="block" id="titre-plante"> </div>
     <div class="block" id="filtre"> </div>
     <div class="block" id="recherche"> </div>
