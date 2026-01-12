@@ -116,12 +116,12 @@ $reseaux = $stmtReseaux->fetchAll();
       <div class="col-md-4 mb-3">
         <h5>Nous contacter</h5>
         <?php if ($entreprise): ?>
-          <p class="small mb-1">📍 <?php echo trim(htmlspecialchars($entreprise['adresse'])) . ', ' . htmlspecialchars($entreprise['ville']) . ' ' . htmlspecialchars($entreprise['postal']); ?></p>
-          <p class="small mb-1">📧 <?php echo htmlspecialchars($entreprise['email']); ?></p>
+          <p class="small mb-3">📍 <?php echo trim(htmlspecialchars($entreprise['adresse'])) . ', ' . htmlspecialchars($entreprise['ville']) . ' ' . htmlspecialchars($entreprise['postal']); ?></p>
+          <p class="small mb-3">📧 <?php echo htmlspecialchars($entreprise['email']); ?></p>
           <p class="small">📞 <?php echo htmlspecialchars($entreprise['tel']); ?></p>
         <?php else: ?>
-          <p class="small mb-1">📍 Informations non disponibles</p>
-          <p class="small mb-1">📧 Informations non disponibles</p>
+          <p class="small mb-3">📍 Informations non disponibles</p>
+          <p class="small mb-3">📧 Informations non disponibles</p>
           <p class="small">📞 Informations non disponibles</p>
         <?php endif; ?>
       </div>
@@ -136,6 +136,78 @@ $reseaux = $stmtReseaux->fetchAll();
     </div>
   </div>
 </footer>
+
+<!-- Bouton retour en haut -->
+<button id="scrollTopBtn" class="scroll-top-btn" title="Retour en haut">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<style>
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #829633;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .scroll-top-btn:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-top-btn.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  // Bouton retour en haut
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  
+  // Afficher/masquer le bouton selon le scroll
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+  
+  // Remonter en haut au clic
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 </body>
 </html>
