@@ -185,6 +185,35 @@ $reseaux = $stmtReseaux->fetchAll();
       transform: translateY(0);
     }
   }
+  
+  /* Responsive pour le bouton retour en haut */
+  @media (max-width: 768px) {
+    .scroll-top-btn {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+    }
+    
+    .scroll-top-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .scroll-top-btn {
+      bottom: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .scroll-top-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
 </style>
 
 <script>
