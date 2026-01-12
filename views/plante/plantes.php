@@ -11,10 +11,85 @@
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
 <section class="grid4" style ="margin-top: 65px;">
-    <div class="block" id="titre-plante"> </div>
-    <div class="block" id="filtre"> </div>
-    <div class="block" id="recherche"> </div>
-    <div class="block" id="plantes"> </div>
+    <div class="block" id="titre-plante"> 
+        <h1>Nos Plantes</h1>
+    </div>
+    <div class="block" id="filtre" style="padding: 15px !important; overflow-y: auto; background: #fff !important; color: #000 !important;">
+        <h3 style="margin: 0 0 15px 0; color: #2b4113; font-size: 1.1rem;">Filtrer par espèce</h3>
+        <form method="GET" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="hidden" name="controleur" value="plante">
+            <input type="hidden" name="action" value="plantes">
+            <?php if (isset($_GET['search'])): ?>
+                <input type="hidden" name="search" value="<?= htmlspecialchars($_GET['search']) ?>">
+            <?php endif; ?>
+            
+            <?php 
+            // Utiliser la liste complète des espèces du contrôleur
+            $especes = isset($toutesLesEspeces) ? $toutesLesEspeces : array_unique(array_filter(array_map(function($p) { return $p['espece']; }, $plantes)));
+            sort($especes);
+            ?>
+            
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #000;">
+                <input type="checkbox" name="espece[]" value=""> 
+                <span>Toutes les espèces</span>
+            </label>
+            
+            <?php foreach ($especes as $espece): ?>
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: #000;">
+                    <input type="checkbox" name="espece[]" value="<?= htmlspecialchars($espece) ?>" 
+                        <?= (isset($_GET['espece']) && in_array($espece, $_GET['espece'])) ? 'checked' : '' ?>>
+                    <span style="font-size: 0.9rem; color: #000;"><?= htmlspecialchars($espece) ?></span>
+                </label>
+            <?php endforeach; ?>
+            
+            <button type="submit" style="margin-top: 15px; padding: 10px; background: #829633; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; font-weight: 600;">Confirmer</button>
+            
+            <?php if (!empty($_GET['espece']) && !in_array('', $_GET['espece'])): ?>
+                <a href="index.php?controleur=plante&action=plantes" style="display: block; padding: 8px; background: #ccc; color: #333; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; text-align: center; text-decoration: none;">Réinitialiser</a>
+            <?php endif; ?>
+        </form>
+    </div>
+    <div class="block" id="recherche" style="padding: 10px !important; display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important;">
+        <form method="GET" style="width: 100%; display: flex; gap: 10px;">
+            <input type="hidden" name="controleur" value="plante">
+            <input type="hidden" name="action" value="plantes">
+            <input type="text" name="search" placeholder="Rechercher une plante..." value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+            <button type="submit" style="padding: 10px 20px; background: #829633; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Chercher</button>
+        </form>
+    </div>
+    <div id="plantes" style="display: flex; flex-wrap: wrap; gap: 15px; padding: 20px; background: #f5f5f5; overflow-y: auto; grid-area: plantes;">
+        <?php 
+        if (!empty($plantes)): 
+        ?>
+            <?php foreach ($plantes as $plante): ?>
+                <div class="plante-card" style="width: calc(20% - 12px); flex-basis: calc(20% - 12px); flex-shrink: 0; flex-grow: 0; min-height: 420px; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.15); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
+                    <?php if (!empty($plante['image'])): ?>
+                        <img src="<?= htmlspecialchars($plante['image']) ?>" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 100%; height: 180px; object-fit: cover;">
+                    <?php else: ?>
+                        <img src="./public/image/placeholder.jpg" alt="Image non disponible" class="plante-image" style="width: 100%; height: 180px; object-fit: cover;">
+                    <?php endif; ?>
+                    
+                    <div class="plante-info" style="padding: 12px; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="plante-nom" style="margin: 0 0 8px 0; font-size: 1.1rem; color: #2b4113;"><?= htmlspecialchars($plante['nom']) ?></h3>
+                        <p class="plante-espece" style="margin: 0 0 8px 0; font-size: 0.85rem;"><strong style="color: #829633;">Espèce:</strong> <?= htmlspecialchars($plante['espece']) ?></p>
+                        
+                        <?php if (!empty($plante['description'])): ?>
+                            <p class="plante-description" style="margin: 0 0 10px 0; font-size: 0.8rem; line-height: 1.3; color: #555;">
+                                <?= htmlspecialchars(substr($plante['description'], 0, 100)) ?>
+                                <?= strlen($plante['description']) > 100 ? '...' : '' ?>
+                            </p>
+                        <?php endif; ?>
+                        
+                        <a href="index.php?controleur=plante&action=description&id=<?= $plante['id'] ?>" class="btn-voir-details" style="display: block; padding: 8px; background: #829633; color: white; text-decoration: none; text-align: center; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-top: auto;">
+                            Voir les détails
+                        </a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="no-plantes" style="color: #666; text-align: center; padding: 40px; width: 100%;">Aucune plante disponible pour le moment.</p>
+        <?php endif; ?>
+    </div>
 </section>
 
 <?php include __DIR__ . '/../layout/footer.php'; ?>

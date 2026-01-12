@@ -151,3 +151,76 @@ ALTER TABLE `utilisateur`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+INSERT INTO plante (nom, espece, description, methode, image) VALUES
+(
+  'Dionée attrape-mouche',
+  'Dionaea muscipula',
+  'Plante carnivore emblématique qui capture les insectes grâce à ses feuilles en forme de mâchoires.',
+  'Substrat composé de tourbe blonde et sable. Arrosage uniquement à l’eau de pluie ou déminéralisée. Exposition très lumineuse.',
+  'public/image/dionee.webp'
+),
+(
+  'Népenthès',
+  'Nepenthes',
+  'Plante tropicale carnivore produisant des urnes remplies de liquide digestif pour piéger les insectes.',
+  'Culture en intérieur chaud et humide. Substrat aéré. Eau non calcaire uniquement.',
+  'public/image/nepenthes.webp'
+),
+(
+  'Sarracénie',
+  'Sarracenia',
+  'Plante carnivore à pièges tubulaires attirant les insectes par leur couleur et leur nectar.',
+  'Plein soleil. Tourbe humide en permanence. Eau de pluie recommandée.',
+  'public/image/sarracenia.webp'
+),
+(
+  'Drosera',
+  'Drosera capensis',
+  'Plante carnivore couverte de poils collants capturant les insectes.',
+  'Pot avec tourbe humide. Forte luminosité. Eau déminéralisée uniquement.',
+  'public/image/drosera.webp'
+),
+(
+  'Utriculaire',
+  'Utricularia',
+  'Plante carnivore aquatique ou terrestre capturant des micro-organismes.',
+  'Milieu très humide ou aquatique. Lumière abondante.',
+  'public/image/utriculaire.webp'
+),
+(
+  'Pinguicula',
+  'Pinguicula vulgaris',
+  'Plante carnivore à feuilles grasses collantes, efficace contre les moucherons.',
+  'Substrat léger et humide. Lumière indirecte. Eau non calcaire.',
+  'public/image/pinguicula.webp'
+),
+(
+  'Cephalotus',
+  'Cephalotus follicularis',
+  'Plante carnivore rare produisant de petits pièges en forme d’urnes.',
+  'Substrat très drainant. Lumière intense sans excès de chaleur.',
+  'public/image/cephalotus.webp'
+),
+(
+  'Heliamphora',
+  'Heliamphora nutans',
+  'Plante carnivore originaire d’Amérique du Sud avec des urnes ouvertes.',
+  'Température fraîche et humidité élevée. Eau déminéralisée.',
+  'public/image/heliamphora.webp'
+),
+(
+  'Darlingtonia',
+  'Darlingtonia californica',
+  'Plante carnivore surnommée plante cobra en raison de sa forme unique.',
+  'Racines au frais. Eau froide et pure. Lumière vive.',
+  'public/image/darlingtonia.webp'
+),
+(
+  'Byblis',
+  'Byblis liniflora',
+  'Plante carnivore aux feuilles fines et collantes, ressemblant à une plante ornementale.',
+  'Substrat sableux et humide. Pleine lumière.',
+  'public/image/byblis.webp'
+);
