@@ -56,8 +56,8 @@
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
 <section class="grid4" style ="margin-top: 65px;">
-    <div class="block" id="titre-plante"> 
-        <h1>Nos Plantes</h1>
+    <div class="block" id="titre-plante" style="background: #ffffff !important; color: #000000 !important;"> 
+        <h1 style="color: #000000 !important; font-weight: 900 !important; text-align: center;">Nos Plantes</h1>
     </div>
     <div class="block" id="filtre" style="padding: 10px !important; overflow-y: visible; background: #fff !important; color: #000 !important;">
         <h3 style="margin: 0 0 8px 0; color: #2b4113; font-size: 1.4rem; padding-bottom: 6px; border-bottom: 2px solid #829633;">Filtrer par espèce</h3>
