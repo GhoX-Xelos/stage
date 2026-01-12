@@ -80,6 +80,18 @@
     }
 }
 
+@media (max-width: 850px) {
+    .grid5 {
+        gap: 1.3rem;
+    }
+    
+    #nom-plante,
+    #image-plante,
+    #description-plante {
+        padding: 1.3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .grid5 {
         padding: 0.5rem;

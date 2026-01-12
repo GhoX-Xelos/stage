@@ -416,6 +416,45 @@
     }
 }
 
+@media (max-width: 850px) {
+    .grid1 {
+        grid-template-rows: 380px auto auto;
+        gap: 1.8rem 1rem;
+    }
+    
+    .grid1 #carrousel {
+        height: 380px;
+    }
+    
+    #presentation {
+        padding: 1.8rem;
+    }
+    
+    .presentation-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .presentation-content p {
+        font-size: 0.98rem;
+    }
+    
+    .objectif-img-wrapper {
+        height: 280px;
+    }
+    
+    .objectif-img {
+        height: 280px;
+    }
+    
+    .objectif-content {
+        padding: 1.8rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.85rem;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 120px;
@@ -469,6 +508,26 @@
     .carousel-btn {
         padding: 8px 20px;
         font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .grid1 {
+        padding: 0.45rem;
+        gap: 1.3rem;
+        grid-template-rows: 330px auto auto;
+    }
+    
+    .grid1 #carrousel {
+        height: 330px;
+    }
+    
+    .presentation-content h2 {
+        font-size: 1.38rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.55rem;
     }
 }
 
