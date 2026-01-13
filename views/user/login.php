@@ -11,7 +11,7 @@
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
 <div class="login-container">
-    <a href="index.php" style="display: inline-block; margin-bottom: 20px; color: #2b4113; text-decoration: none; font-weight: 600;">← Retour à l'accueil</a>
+    <a href="index.php" style="display: inline-block; margin-bottom: 1.1%; color: #2b4113; text-decoration: none; font-weight: 600;">← Retour à l'accueil</a>
     <h2>Connexion</h2>
 
     <?php if (!empty($message)): ?>

@@ -1,18 +1,18 @@
 .grid2 {
     display: grid;
-    height: calc(100vh - 80px);
+    height: calc(100% - 5%);
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 0.8fr 0.1fr;
+    grid-template-columns: 33.33% 33.33% 33.34%;
+    grid-template-rows: 10% 80% 10%;
     grid-template-areas:
       "banniere1 banniere1 banniere1"
       "favoris1 favoris2 favoris3"
       "banniere2 banniere2 banniere2"; 
-    gap: 1rem 1rem;
-    padding: 1rem 1rem 0 1rem;
+    gap: 1% 1%;
+    padding: 1% 1% 0 1%;
     box-sizing: border-box;
-    margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
 }
 
 #banniere1 { 
@@ -21,30 +21,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1%;
 }
 
 #favoris1 { 
     grid-area: favoris1;
     background: #ffffff !important;
-    padding: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1.5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 #favoris2 { 
     grid-area: favoris2;
     background: #ffffff !important;
-    padding: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1.5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 #favoris3 { 
     grid-area: favoris3;
     background: #ffffff !important;
-    padding: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1.5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
@@ -54,12 +54,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1%;
 }
 
 :root{
-    --main-radius:5px;
-    --main-padding:5px;
+    --main-radius:0.5rem;
+    --main-padding:0.5rem;
   }
   
 .block {

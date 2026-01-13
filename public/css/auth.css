@@ -2,60 +2,60 @@
 
 /* Styles pour la page de CONNEXION (login) */
 .login-container {
-    max-width: 600px;
+    max-width: 37.5%;
     width: 90%;
-    margin: 15rem auto 250px auto;
-    padding: 27px;
+    margin: 9.375% auto 15.625% auto;
+    padding: 1.6875%;
     background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125% 0.625% rgba(0, 0, 0, 0.1);
 }
 
 /* Styles pour la page d'INSCRIPTION (sign in) */
 .register-container {
-    max-width: 600px;
+    max-width: 37.5%;
     width: 90%;
-    margin: 9rem auto 90px auto;
-    padding: 27px;
+    margin: 5.625% auto 5.625% auto;
+    padding: 1.6875%;
     background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125% 0.625% rgba(0, 0, 0, 0.1);
 }
 
 .login-container h2,
 .register-container h2 {
     color: #829633;
     text-align: center;
-    margin-bottom: 16px;
-    font-size: 32px;
+    margin-bottom: 1%;
+    font-size: 200%;
     font-weight: 700;
 }
 
 .form-group {
-    margin-bottom: 14px;
+    margin-bottom: 0.875%;
 }
 
 .form-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 15px !important;
-    margin-bottom: 5px !important;
+    gap: 0.9375% !important;
+    margin-bottom: 0.3125% !important;
     width: 100% !important;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 0.375%;
     color: #333;
     font-weight: 600;
 }
 
 .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 0.625%;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 0.25rem;
+    font-size: 87.5%;
     box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
@@ -63,13 +63,13 @@
 .form-group input:focus {
     outline: none;
     border-color: #829633;
-    box-shadow: 0 0 4px rgba(43, 65, 19, 0.2);
+    box-shadow: 0 0 0.25% rgba(43, 65, 19, 0.2);
 }
 
 .message {
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 4px;
+    padding: 0.75%;
+    margin-bottom: 1.25%;
+    border-radius: 0.25rem;
     color: #d32f2f;
     background: #ffebee;
     border-left: 4px solid #d32f2f;
@@ -77,19 +77,19 @@
 
 .button-group {
     display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-    margin-top: 15px;
+    gap: 0.625%;
+    margin-bottom: 0.75%;
+    margin-top: 0.9375%;
 }
 
 .button-group button,
 .button-group a {
     flex: 1;
-    padding: 9px;
+    padding: 0.5625%;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 87.5%;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
@@ -117,20 +117,20 @@
 .signup-link,
 .login-link {
     text-align: center;
-    margin-top: 12px;
+    margin-top: 0.75%;
     color: #666;
 }
 
 .signup-link {
-    padding-top: 10px;
+    padding-top: 0.625%;
     border-top: 1px solid #ddd;
 }
 
 .signup-link p,
 .login-link p {
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625% 0;
     color: #666;
-    font-size: 14px;
+    font-size: 87.5%;
 }
 
 .signup-link a,
@@ -148,12 +148,12 @@
 
 .back-button {
     display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 15px;
+    margin-bottom: 1.25%;
+    padding: 0.625% 0.9375%;
     background-color: #f0f0f0;
     color: #333;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     font-weight: 600;
     transition: background-color 0.2s ease;
 }
@@ -170,191 +170,191 @@ footer {
 @media (max-width: 1400px) {
     .login-container,
     .register-container {
-        max-width: 550px;
+        max-width: 34.375%;
     }
 }
 
 @media (max-width: 992px) {
     .login-container {
-        margin: 12rem auto 200px auto;
-        padding: 25px;
+        margin: 7.5% auto 12.5% auto;
+        padding: 1.5625%;
     }
     
     .register-container {
-        margin: 7rem auto 70px auto;
-        padding: 25px;
+        margin: 4.375% auto 4.375% auto;
+        padding: 1.5625%;
     }
     
     .login-container h2,
     .register-container h2 {
-        font-size: 30px;
+        font-size: 187.5%;
     }
 }
 
 @media (max-width: 768px) {
     .login-container,
     .register-container {
-        max-width: 500px;
+        max-width: 31.25%;
         width: 95%;
-        padding: 24px;
+        padding: 1.5%;
     }
     
     .login-container {
-        margin: 10rem auto 150px auto;
+        margin: 6.25% auto 9.375% auto;
     }
     
     .register-container {
-        margin: 6rem auto 50px auto;
+        margin: 3.75% auto 3.125% auto;
     }
     
     .login-container h2,
     .register-container h2 {
-        font-size: 28px;
+        font-size: 175%;
     }
     
     .form-row {
         grid-template-columns: 1fr !important;
-        gap: 10px !important;
+        gap: 0.625% !important;
     }
     
     .form-group input {
-        font-size: 13px;
+        font-size: 81.25%;
     }
 }
 
 @media (max-width: 600px) {
     .login-container,
     .register-container {
-        padding: 20px;
+        padding: 1.25%;
         width: 97%;
     }
     
     .login-container h2,
     .register-container h2 {
-        font-size: 24px;
-        margin-bottom: 14px;
+        font-size: 150%;
+        margin-bottom: 0.875%;
     }
     
     .button-group {
         flex-direction: column;
-        gap: 8px;
+        gap: 0.5%;
     }
     
     .button-group button,
     .button-group a {
         width: 100%;
-        padding: 10px;
+        padding: 0.625%;
     }
     
     .form-group input {
-        padding: 9px;
-        font-size: 13px;
+        padding: 0.5625%;
+        font-size: 81.25%;
     }
 }
 
 @media (max-width: 480px) {
     .login-container,
     .register-container {
-        width: calc(100% - 20px);
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 18px;
+        width: calc(100% - 1.25%);
+        margin-left: 0.625%;
+        margin-right: 0.625%;
+        padding: 1.125%;
     }
     
     .login-container {
-        margin-top: 8rem;
-        margin-bottom: 100px;
+        margin-top: 5%;
+        margin-bottom: 6.25%;
     }
     
     .register-container {
-        margin-top: 5rem;
-        margin-bottom: 40px;
+        margin-top: 3.125%;
+        margin-bottom: 2.5%;
     }
     
     .login-container h2,
     .register-container h2 {
-        font-size: 22px;
-        margin-bottom: 12px;
+        font-size: 137.5%;
+        margin-bottom: 0.75%;
     }
     
     .form-group {
-        margin-bottom: 12px;
+        margin-bottom: 0.75%;
     }
     
     .form-group input {
-        font-size: 13px;
-        padding: 9px;
+        font-size: 81.25%;
+        padding: 0.5625%;
     }
     
     .form-group label {
-        font-size: 13px;
-        margin-bottom: 5px;
+        font-size: 81.25%;
+        margin-bottom: 0.3125%;
     }
     
     .button-group {
-        margin-top: 12px;
-        gap: 7px;
+        margin-top: 0.75%;
+        gap: 0.4375%;
     }
     
     .button-group button,
     .button-group a {
-        padding: 9px;
-        font-size: 13px;
+        padding: 0.5625%;
+        font-size: 81.25%;
     }
 }
 
 @media (max-width: 360px) {
     .login-container,
     .register-container {
-        padding: 15px;
-        width: calc(100% - 10px);
-        margin-left: 5px;
-        margin-right: 5px;
+        padding: 0.9375%;
+        width: calc(100% - 0.625%);
+        margin-left: 0.3125%;
+        margin-right: 0.3125%;
     }
     
     .login-container {
-        margin-top: 7rem;
-        margin-bottom: 80px;
+        margin-top: 4.375%;
+        margin-bottom: 5%;
     }
     
     .register-container {
-        margin-top: 4.5rem;
-        margin-bottom: 30px;
+        margin-top: 2.8125%;
+        margin-bottom: 1.875%;
     }
     
     .login-container h2,
     .register-container h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 125%;
+        margin-bottom: 0.625%;
     }
     
     .form-group {
-        margin-bottom: 10px;
+        margin-bottom: 0.625%;
     }
     
     .form-group input {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 75%;
+        padding: 0.5%;
     }
     
     .form-group label {
-        font-size: 12px;
-        margin-bottom: 4px;
+        font-size: 75%;
+        margin-bottom: 0.25%;
     }
     
     .button-group button,
     .button-group a {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 75%;
+        padding: 0.5%;
     }
     
     .signup-link p,
     .login-link p {
-        font-size: 12px;
+        font-size: 75%;
     }
     
     .message {
-        padding: 10px;
-        font-size: 12px;
+        padding: 0.625%;
+        font-size: 75%;
     }
 }

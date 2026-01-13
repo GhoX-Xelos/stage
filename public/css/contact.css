@@ -1,43 +1,44 @@
     .grid6 {
     display: grid;
-    height: calc(100vh - 66px);
+    height: calc(100% - 5%);
     width: 100%;
-    grid-template-columns: 0.3fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
       "informations formulaire"; 
-    gap: 1rem 1rem;
-    padding: 1rem;
+    gap: 1% 1%;
+    padding: 1% 1% 0 1%;
     box-sizing: border-box;
-    margin: 0;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
 }
 
 #titre-contact { 
-    display: none;
+    grid-area: titre-contact; 
+    background: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
 }
 
 #informations { 
     grid-area: informations;
-    background: #212529 !important;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    color: #f8f9fa;
-    margin-top: 0;
-    margin-bottom: 0;
+    background: #ffffff !important;
+    padding: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #formulaire { 
     grid-area: formulaire;
     background: #ffffff !important;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    margin-left: 4rem;
-    margin-right: 4rem;
+    padding: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 :root{
-    --main-radius:5px;
-    --main-padding:5px;
+    --main-radius:0.5rem;
+    --main-padding:0.5rem;
   }
   
 .block {
@@ -94,7 +95,7 @@
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 6.4%;
     }
     
     .grid6 {
@@ -136,7 +137,7 @@
 
 @media (max-width: 360px) {
     body {
-        padding-top: 140px;
+        padding-top: 7.5%;
     }
     
     .grid6 {
