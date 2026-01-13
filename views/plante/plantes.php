@@ -56,7 +56,7 @@
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
 <section class="grid4" style ="margin-top: 65px;">
-    <div class="block" id="titre-plante" style="background: #ffffff !important; color: #000000 !important; display: flex !important; align-items: center !important; justify-content: center !important;"> 
+    <div class="block" id="titre-plante" style="background-color: #0000004f !important; color: #000000 !important; display: flex !important; align-items: center !important; justify-content: center !important;"> 
         <img src="./public/image/plante1.png" alt="Plante" style="height: 60px; width: auto; margin-right: 15px;">
         <h1 style="color: #000000 !important; font-weight: 900 !important; margin: 0;">Nos Plantes</h1>
         <img src="./public/image/plante3.png" alt="Plante" style="height: 60px; width: auto; margin-left: 15px;">

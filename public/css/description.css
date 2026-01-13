@@ -2,8 +2,8 @@
     display: grid;
     height: 90vh;
     width: 100%;
-    grid-template-columns: 0.3fr 1fr;
-    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-columns: 0.43fr 1fr;
+    grid-template-rows: 0.12fr 0.88fr;
     grid-template-areas:
       "image-plante nom-plante"
       "image-plante description-plante"; 
@@ -39,6 +39,8 @@
     padding: 2rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 :root{
@@ -56,7 +58,7 @@
 /* Media Queries pour tous types d'écran */
 @media (max-width: 1200px) {
     .grid5 {
-        grid-template-columns: 0.35fr 1fr;
+        grid-template-columns: 0.43fr 1fr;
         gap: 1rem 0.8rem;
     }
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/description.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/description.css?v=<?php echo time(); ?>">
     <title><?= htmlspecialchars($plante['nom']) ?> - Détails</title>
 </head>
 <body>
@@ -29,7 +29,14 @@
                 <p style="font-size: 1.1rem; color: #555; line-height: 1.8; margin: 0 0 25px 0;"><?= nl2br(htmlspecialchars($plante['description'])) ?></p>
             </div>
             
-            <a href="index.php?controleur=plante&action=plantes" style="display: inline-block; padding: 12px 30px; background: #829633; color: white; text-decoration: none; border-radius: 6px; font-size: 1rem; font-weight: 600;">← Retour aux plantes</a>
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <button style="padding: 16px 40px; background: #829633; color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: 600; cursor: pointer;">Méthode d'entretien</button>
+                <button style="padding: 16px; background: #829633; color: white; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center;"><img src="./public/image/download.svg?v=<?php echo time(); ?>" alt="Download" style="width: 24px; height: 24px; filter: brightness(0) invert(1);"></button>
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-top: auto; padding-top: 50px;">
+                <a href="index.php?controleur=plante&action=plantes" style="display: inline-block; padding: 12px 30px; background: #829633; color: white; text-decoration: none; border-radius: 6px; font-size: 1rem; font-weight: 600;">← Retour aux plantes</a>
+            </div>
         </div>
     </section>
 
