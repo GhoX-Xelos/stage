@@ -1,16 +1,17 @@
 .grid1 {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "carrousel carrousel"
-      "presentation objectif"; 
-    gap: 10% 2%;
-    padding: 2%;
-    padding-top: 0;
-    box-sizing: border-box;
-    margin-bottom: 1%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "carrousel carrousel"
+            "presentation objectif"; 
+        row-gap: 10%;
+        column-gap: 2%;
+        padding: 2%;
+        padding-top: 0;
+        box-sizing: border-box;
+        margin-bottom: 1%;
 }
 
 .grid1 #carrousel {
