@@ -1,6 +1,6 @@
     .grid5 {
     display: grid;
-    height: 90%;
+    min-height: calc(100vh - 100px);
     width: 100%;
     grid-template-columns: 0.43fr 1fr;
     grid-template-rows: 0.12fr 0.88fr;
