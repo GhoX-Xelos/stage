@@ -56,7 +56,7 @@ $reseaux = $stmtReseaux->fetchAll();
           foreach ($reseaux as $index => $reseau): 
           ?>
             <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="text-light text-decoration-none d-flex align-items-center gap-2 py-2 px-3 rounded hover-social" style="transition: all 0.3s ease;">
-              <img width="28" height="28" src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>">
+              <img style="width: 1.5rem; height: 1.5rem;" src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>">
               <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
             </a>
           <?php endforeach; ?>
@@ -69,7 +69,7 @@ $reseaux = $stmtReseaux->fetchAll();
           
           .nav-footer-link {
             display: inline-block;
-            padding: 5px 0;
+            padding: 0.3rem 0;
             position: relative;
             transition: all 0.3s ease;
           }
@@ -79,7 +79,7 @@ $reseaux = $stmtReseaux->fetchAll();
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: 3px;
+            bottom: 0.25rem;
             left: 0;
             background-color: #fff;
             transition: width 0.3s ease;
@@ -87,7 +87,7 @@ $reseaux = $stmtReseaux->fetchAll();
           
           .nav-footer-link:hover {
             color: #ffffff !important;
-            padding-left: 8px;
+            padding-left: 0.5rem;
           }
           
           .nav-footer-link:hover::after {
@@ -96,8 +96,8 @@ $reseaux = $stmtReseaux->fetchAll();
           
           footer h5 {
             position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
           }
           
           footer h5::after {
@@ -105,7 +105,7 @@ $reseaux = $stmtReseaux->fetchAll();
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 50px;
+            width: 3rem;
             height: 2px;
             background-color: #fff;
           }
@@ -118,7 +118,7 @@ $reseaux = $stmtReseaux->fetchAll();
             
             footer h5 {
               font-size: 1.1rem;
-              margin-bottom: 12px;
+              margin-bottom: 0.6%;
             }
             
             footer p,
@@ -138,7 +138,7 @@ $reseaux = $stmtReseaux->fetchAll();
             
             footer h5 {
               font-size: 1rem;
-              margin-bottom: 10px;
+              margin-bottom: 0.5%;
             }
             
             footer p,
@@ -203,7 +203,7 @@ $reseaux = $stmtReseaux->fetchAll();
 
 <!-- Bouton retour en haut -->
 <button id="scrollTopBtn" class="scroll-top-btn" title="Retour en haut">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="18 15 12 9 6 15"></polyline>
   </svg>
 </button>
@@ -211,10 +211,10 @@ $reseaux = $stmtReseaux->fetchAll();
 <style>
   .scroll-top-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
     background-color: #829633;
     color: white;
     border: none;
@@ -223,15 +223,15 @@ $reseaux = $stmtReseaux->fetchAll();
     display: none;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     z-index: 1000;
   }
   
   .scroll-top-btn:hover {
     background-color: #9db042;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
   
   .scroll-top-btn.show {
@@ -242,7 +242,7 @@ $reseaux = $stmtReseaux->fetchAll();
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(8px);
     }
     to {
       opacity: 1;
@@ -253,29 +253,29 @@ $reseaux = $stmtReseaux->fetchAll();
   /* Responsive pour le bouton retour en haut */
   @media (max-width: 768px) {
     .scroll-top-btn {
-      bottom: 20px;
-      right: 20px;
-      width: 45px;
-      height: 45px;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 2.75rem;
+      height: 2.75rem;
     }
     
     .scroll-top-btn svg {
-      width: 20px;
-      height: 20px;
+      width: 1.3rem;
+      height: 1.3rem;
     }
   }
   
   @media (max-width: 480px) {
     .scroll-top-btn {
-      bottom: 15px;
-      right: 15px;
-      width: 40px;
-      height: 40px;
+      bottom: 1rem;
+      right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
     
     .scroll-top-btn svg {
-      width: 18px;
-      height: 18px;
+      width: 1.2rem;
+      height: 1.2rem;
     }
   }
 </style>

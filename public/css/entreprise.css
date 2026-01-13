@@ -1,17 +1,17 @@
 .grid3 {
     display: grid;
-    height: calc(100vh - 80px);
+    height: calc(100% - 5%);
     width: 100%;
-    grid-template-columns: 1fr 0.02fr 1fr;
-    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-columns: 49% 2% 49%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
       "titre titre titre"
       "presentation1 barre presentation2"; 
-    gap: 1rem 1rem;
-    padding: 1rem 1rem 0 1rem;
+    gap: 1% 1%;
+    padding: 1% 1% 0 1%;
     box-sizing: border-box;
-    margin-bottom: 1rem;
-    margin-top: 4rem;
+    margin-bottom: 1%;
+    margin-top: 2.5%;
 }
 
 #titre { 
@@ -20,14 +20,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 1%;
 }
 
 #presentation1 { 
     grid-area: presentation1;
     background: #ffffff !important;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
@@ -39,14 +39,14 @@
 #presentation2 { 
     grid-area: presentation2;
     background: #ffffff !important;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 :root{
-    --main-radius:5px;
-    --main-padding:5px;
+    --main-radius:0.5rem;
+    --main-padding:0.5rem;
   }
   
 .block {
@@ -93,7 +93,7 @@
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 6.4%;
     }
     
     .grid3 {
@@ -135,7 +135,7 @@
 
 @media (max-width: 360px) {
     body {
-        padding-top: 140px;
+        padding-top: 7.5%;
     }
     
     .grid3 {

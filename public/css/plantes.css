@@ -1,17 +1,18 @@
 .grid4 {
     display: grid;
-    height: calc(100vh - 80px);
+    height: calc(100% - 5%);
     width: 100%;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 0.1fr  0.05fr 1fr;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 5% 85%;
     grid-template-areas:
       "titre-plante titre-plante"
       "filtre recherche"
       "filtre plantes"; 
-    gap: 1rem 1rem;
-    padding: 0 1rem 0 1rem;
+    gap: 1% 1%;
+    padding: 0 1% 0 1%;
     box-sizing: border-box;
-    margin-bottom: 1rem;
+    margin-bottom: 1%;
+    margin-top: 4%;
 }
 
 #titre-plante { grid-area: titre-plante; }
@@ -20,8 +21,8 @@
 #plantes { grid-area: plantes; }
 
 :root{
-    --main-radius:5px;
-    --main-padding:5px;
+    --main-radius:0.5rem;
+    --main-padding:0.5rem;
   }
   
 .block {
@@ -45,7 +46,7 @@
 }
 
 #titre-plante h1 {
-    font-size: 2.5rem;
+    font-size: 156.25%;
     font-weight: 700;
     color: #000000 !important;
     margin: 0;
@@ -55,45 +56,45 @@
 /* ZONE DES PLANTES */
 #plantes {
     background: #f5f5f5 !important;
-    padding: 20px !important;
+    padding: 1.25% !important;
     overflow-y: auto !important;
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 15px !important;
+    gap: 1% !important;
     align-content: flex-start !important;
 }
 
 /* CARTE INDIVIDUELLE */
 div.plante-card {
-    width: calc(20% - 12px) !important;
-    min-width: 180px !important;
+    width: calc(20% - 1%) !important;
+    min-width: 11.25% !important;
     background-color: white !important;
-    border: 2px solid #ddd !important;
-    border-radius: 8px !important;
+    border: 0.125% solid #ddd !important;
+    border-radius: 0.5% !important;
     overflow: hidden !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0.125% 0.5% rgba(0,0,0,0.1) !important;
     display: flex !important;
     flex-direction: column !important;
 }
 
 div.plante-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
-    transform: translateY(-3px);
+    box-shadow: 0 0.25% 0.75% rgba(0,0,0,0.2) !important;
+    transform: translateY(-0.2%);
     transition: all 0.3s;
 }
 
 /* IMAGE */
 img.plante-image {
     width: 100% !important;
-    height: 180px !important;
+    height: 11.25% !important;
     object-fit: cover !important;
     display: block !important;
-    border-bottom: 2px solid #eee !important;
+    border-bottom: 0.125% solid #eee !important;
 }
 
 /* INFOS */
 div.plante-info {
-    padding: 12px !important;
+    padding: 0.75% !important;
     background: white !important;
     display: flex !important;
     flex-direction: column !important;
@@ -101,16 +102,16 @@ div.plante-info {
 }
 
 h3.plante-nom {
-    font-size: 1.1rem !important;
+    font-size: 68.75% !important;
     font-weight: bold !important;
     color: #2b4113 !important;
-    margin: 0 0 8px 0 !important;
+    margin: 0 0 0.5% 0 !important;
 }
 
 p.plante-espece {
-    font-size: 0.85rem !important;
+    font-size: 53.125% !important;
     color: #666 !important;
-    margin: 0 0 8px 0 !important;
+    margin: 0 0 0.5% 0 !important;
 }
 
 p.plante-espece strong {
@@ -118,23 +119,23 @@ p.plante-espece strong {
 }
 
 p.plante-description {
-    font-size: 0.8rem !important;
+    font-size: 50% !important;
     color: #555 !important;
     line-height: 1.3 !important;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 0.625% 0 !important;
 }
 
 /* BOUTON */
 a.btn-voir-details {
     display: block !important;
     width: 100% !important;
-    padding: 8px 0 !important;
+    padding: 0.5% 0 !important;
     background: #829633 !important;
     color: white !important;
     text-decoration: none !important;
     text-align: center !important;
-    border-radius: 4px !important;
-    font-size: 0.85rem !important;
+    border-radius: 0.25% !important;
+    font-size: 53.125% !important;
     font-weight: 600 !important;
     box-sizing: border-box !important;
     margin-top: auto !important;
@@ -148,14 +149,27 @@ p.no-plantes {
     width: 100% !important;
     color: #666 !important;
     text-align: center !important;
-    padding: 40px !important;
+    padding: 2.5% !important;
 }
   
 
 /* Media Queries pour Responsive */
+@media (max-width: 1680px) {
+    .grid4 {
+        margin-top: 2.7%;
+    }
+}
+
+@media (max-width: 1600px) {
+    .grid4 {
+        margin-top: 2.1%;
+    }
+}
+
 @media (max-width: 1400px) {
     .grid4 {
         grid-template-columns: 0.22fr 1fr;
+        margin-top: 1.6%;
     }
 }
 
@@ -163,6 +177,7 @@ p.no-plantes {
     .grid4 {
         grid-template-columns: 0.25fr 1fr;
         gap: 1rem 0.8rem;
+        margin-top: 1.1%;
     }
 }
 
@@ -170,15 +185,16 @@ p.no-plantes {
     .grid4 {
         grid-template-columns: 0.28fr 1fr;
         gap: 1rem 0.6rem;
+        margin-top: 0.8%;
     }
     
     div.plante-card {
-        width: calc(25% - 12px) !important;
-        min-width: 170px !important;
+        width: calc(25% - 0.6%) !important;
+        min-width: 9% !important;
     }
     
     img.plante-image {
-        height: 170px !important;
+        height: 9% !important;
     }
     
     #titre-plante h1 {
@@ -201,17 +217,17 @@ p.no-plantes {
     }
     
     #filtre {
-        max-height: 400px;
+        max-height: 21.3%;
         overflow-y: auto;
     }
     
     div.plante-card {
-        width: calc(33.333% - 12px) !important;
-        min-width: 160px !important;
+        width: calc(33.333% - 0.6%) !important;
+        min-width: 8.5% !important;
     }
     
     img.plante-image {
-        height: 160px !important;
+        height: 8.5% !important;
     }
 }
 
@@ -222,12 +238,12 @@ p.no-plantes {
     }
     
     div.plante-card {
-        width: calc(50% - 12px) !important;
-        min-width: 150px !important;
+        width: calc(50% - 0.6%) !important;
+        min-width: 8% !important;
     }
     
     img.plante-image {
-        height: 155px !important;
+        height: 8.3% !important;
     }
     
     h3.plante-nom {
@@ -241,7 +257,7 @@ p.no-plantes {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 120px;
+        padding-top: 6.4%;
     }
     
     .grid4 {
@@ -250,20 +266,20 @@ p.no-plantes {
     }
     
     #filtre {
-        max-height: 350px;
+        max-height: 18.6%;
     }
     
     div.plante-card {
-        width: calc(50% - 12px) !important;
-        min-width: 140px !important;
+        width: calc(50% - 0.6%) !important;
+        min-width: 7.5% !important;
     }
     
     img.plante-image {
-        height: 150px !important;
+        height: 8% !important;
     }
     
     div.plante-info {
-        padding: 10px !important;
+        padding: 0.5% !important;
     }
     
     h3.plante-nom {
@@ -282,20 +298,20 @@ p.no-plantes {
     }
     
     #filtre {
-        max-height: 280px;
+        max-height: 14.9%;
     }
     
     div.plante-card {
-        width: calc(50% - 10px) !important;
-        min-width: 130px !important;
+        width: calc(50% - 0.5%) !important;
+        min-width: 6.9% !important;
     }
     
     img.plante-image {
-        height: 140px !important;
+        height: 7.5% !important;
     }
     
     div.plante-info {
-        padding: 10px !important;
+        padding: 0.5% !important;
     }
     
     h3.plante-nom {
@@ -319,7 +335,7 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 220px !important;
+        height: 11.7% !important;
     }
     
     #titre-plante h1 {
@@ -335,16 +351,16 @@ p.no-plantes {
     
     div.plante-card {
         width: 100% !important;
-        min-width: 120px !important;
+        min-width: 6.4% !important;
         max-width: 100% !important;
     }
     
     img.plante-image {
-        height: 200px !important;
+        height: 10.6% !important;
     }
     
     div.plante-info {
-        padding: 12px !important;
+        padding: 0.6% !important;
     }
     
     h3.plante-nom {
@@ -356,14 +372,14 @@ p.no-plantes {
     }
     
     a.btn-voir-details {
-        padding: 10px 0 !important;
+        padding: 0.5% 0 !important;
         font-size: 0.9rem !important;
     }
 }
 
 @media (max-width: 360px) {
     body {
-        padding-top: 140px;
+        padding-top: 7.5%;
     }
     
     .grid4 {
@@ -376,11 +392,11 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 180px !important;
+        height: 9.6% !important;
     }
     
     div.plante-info {
-        padding: 10px !important;
+        padding: 0.5% !important;
     }
     
     h3.plante-nom {

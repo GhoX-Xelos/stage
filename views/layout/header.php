@@ -1,4 +1,4 @@
-<header class="navbar" style="padding-right: 10px;"> 
+<header class="navbar" style="padding-right: 0.5%;"> 
     <a href="index.php" style="text-decoration: none; color: inherit;">
         <div class="logo">
             <img src="./public/image/logo.png" alt="Logo">

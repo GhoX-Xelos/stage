@@ -1,16 +1,16 @@
     .grid5 {
     display: grid;
-    height: 90vh;
+    height: 90%;
     width: 100%;
-    grid-template-columns: 0.3fr 1fr;
-    grid-template-rows: 0.1fr 0.9fr;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 90%;
     grid-template-areas:
       "image-plante nom-plante"
       "image-plante description-plante"; 
-    gap: 1rem 1rem;
-    padding: 1rem 1rem 0 1rem;
+    gap: 1% 1%;
+    padding: 1% 1% 0 1%;
     box-sizing: border-box;
-    margin-bottom: 1rem;
+    margin-bottom: 1%;
 }
 
 #nom-plante { 
@@ -19,15 +19,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #image-plante { 
     grid-area: image-plante;
     background: #ffffff !important;
-    padding: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 1%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,14 +36,14 @@
 #description-plante { 
     grid-area: description-plante;
     background: #ffffff !important;
-    padding: 2rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
 :root{
-    --main-radius:5px;
-    --main-padding:5px;
+    --main-radius:0.5rem;
+    --main-padding:0.5rem;
   }
   
 .block {
