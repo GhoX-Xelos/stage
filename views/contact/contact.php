@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/contact.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/contact.css?v=<?php echo time(); ?>">
     <title>Contact</title>
 </head>
 <body>

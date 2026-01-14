@@ -12,7 +12,7 @@
     padding: 0 1% 0 1%;
     box-sizing: border-box;
     margin-bottom: 1%;
-    margin-top: 4%;
+        margin-top: 0;
 }
 
 #titre-plante { grid-area: titre-plante; }
@@ -86,7 +86,8 @@ div.plante-card:hover {
 /* IMAGE */
 img.plante-image {
     width: 100% !important;
-    height: 11.25% !important;
+    aspect-ratio: 1 / 1 !important;
+    height: auto !important;
     object-fit: cover !important;
     display: block !important;
     border-bottom: 0.125% solid #eee !important;
@@ -156,20 +157,20 @@ p.no-plantes {
 /* Media Queries pour Responsive */
 @media (max-width: 1680px) {
     .grid4 {
-        margin-top: 2.7%;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 1600px) {
     .grid4 {
-        margin-top: 2.1%;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 1400px) {
     .grid4 {
         grid-template-columns: 0.22fr 1fr;
-        margin-top: 1.6%;
+        margin-top: 0;
     }
 }
 
@@ -177,7 +178,7 @@ p.no-plantes {
     .grid4 {
         grid-template-columns: 0.25fr 1fr;
         gap: 1rem 0.8rem;
-        margin-top: 1.1%;
+        margin-top: 0;
     }
 }
 
@@ -185,7 +186,7 @@ p.no-plantes {
     .grid4 {
         grid-template-columns: 0.28fr 1fr;
         gap: 1rem 0.6rem;
-        margin-top: 0.8%;
+        margin-top: 0;
     }
     
     div.plante-card {
@@ -194,7 +195,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 9% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     #titre-plante h1 {
@@ -227,7 +229,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 8.5% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
 }
 
@@ -243,7 +246,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 8.3% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     h3.plante-nom {
@@ -275,7 +279,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 8% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     div.plante-info {
@@ -307,7 +312,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 7.5% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     div.plante-info {
@@ -335,7 +341,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 11.7% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     #titre-plante h1 {
@@ -356,7 +363,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 10.6% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     div.plante-info {
@@ -392,7 +400,8 @@ p.no-plantes {
     }
     
     img.plante-image {
-        height: 9.6% !important;
+        aspect-ratio: 1 / 1 !important;
+        height: auto !important;
     }
     
     div.plante-info {
