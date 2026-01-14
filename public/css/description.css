@@ -1,16 +1,17 @@
     .grid5 {
     display: grid;
-    min-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
     width: 100%;
     grid-template-columns: 0.43fr 1fr;
-    grid-template-rows: 0.12fr 0.88fr;
+    grid-template-rows: 0.15fr 0.85fr;
     grid-template-areas:
       "image-plante nom-plante"
       "image-plante description-plante"; 
     gap: 1% 1%;
     padding: 1% 1% 0 1%;
     box-sizing: border-box;
-    margin-bottom: 1%;
+    margin-bottom: 30px;
+    margin-top: 65px;
 }
 
 #nom-plante { 

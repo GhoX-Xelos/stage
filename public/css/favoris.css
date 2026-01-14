@@ -1,9 +1,9 @@
 .grid2 {
     display: grid;
-    height: calc(100% - 5%);
+    height: calc(100vh - 100px);
     width: 100%;
     grid-template-columns: 33.33% 33.33% 33.34%;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-rows: 15% 70% 15%;
     grid-template-areas:
       "banniere1 banniere1 banniere1"
       "favoris1 favoris2 favoris3"
@@ -12,7 +12,7 @@
     padding: 1% 1% 0 1%;
     box-sizing: border-box;
     margin-bottom: 1%;
-    margin-top: 2.5%;
+    margin-top: 65px;
 }
 
 #banniere1 { 
@@ -27,25 +27,34 @@
 #favoris1 { 
     grid-area: favoris1;
     background: #ffffff !important;
-    padding: 1.5%;
+    padding: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #favoris2 { 
     grid-area: favoris2;
     background: #ffffff !important;
-    padding: 1.5%;
+    padding: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #favoris3 { 
     grid-area: favoris3;
     background: #ffffff !important;
-    padding: 1.5%;
+    padding: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #banniere2 { 

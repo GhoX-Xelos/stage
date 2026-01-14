@@ -224,3 +224,35 @@ INSERT INTO plante (nom, espece, description, methode, image) VALUES
   'Substrat sableux et humide. Pleine lumière.',
   'public/image/byblis.webp'
 );
+
+CREATE TABLE favoris (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255),
+    espece VARCHAR(100),
+    methode VARCHAR(100)
+);
+
+INSERT INTO favoris (nom, description, image, espece, methode) VALUES
+(
+    'Dionaea muscipula',
+    'Plante carnivore connue sous le nom de attrape-mouche de Vénus, elle capture les insectes avec ses feuilles pièges.',
+    'dionaea.jpg',
+    'Plante carnivore',
+    'Piégeage'
+),
+(
+    'Nepenthes',
+    'Plante tropicale carnivore utilisant des urnes remplies de liquide pour piéger les insectes.',
+    'nepenthes.jpg',
+    'Plante carnivore',
+    'Piège à urne'
+),
+(
+    'Drosera',
+    'Plante carnivore recouverte de poils collants qui capturent les insectes.',
+    'drosera.jpg',
+    'Plante carnivore',
+    'Piège collant'
+);
