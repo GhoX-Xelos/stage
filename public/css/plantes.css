@@ -1,24 +1,27 @@
 .grid4 {
-    display: grid;
-    height: calc(100% - 5%);
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
     width: 100%;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 10% 5% 85%;
-    grid-template-areas:
-      "titre-plante titre-plante"
-      "filtre recherche"
-      "filtre plantes"; 
-    gap: 1% 1%;
-    padding: 0 1% 0 1%;
+    gap: 2vh;
+    padding: 1vh 1vw;
+    margin-bottom: 0;
     box-sizing: border-box;
-    margin-bottom: 1%;
-        margin-top: 0;
 }
 
-#titre-plante { grid-area: titre-plante; }
-#filtre { grid-area: filtre; }
-#recherche { grid-area: recherche; }
-#plantes { grid-area: plantes; }
+.grid4 .content-row {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    flex: 1;
+}
+
+.grid4 .filtre-column {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
 
 :root{
     --main-radius:0.5rem;
@@ -45,41 +48,132 @@
     background: #ffffff !important;
 }
 
+#titre-plante img.plante-icon-left {
+    height: 6vh;
+    width: auto;
+    margin-right: 1vw;
+}
+
+#titre-plante img.plante-icon-right {
+    height: 6vh;
+    width: auto;
+    margin-left: 1vw;
+}
+
 #titre-plante h1 {
-    font-size: 156.25%;
-    font-weight: 700;
+    font-size: 3vh;
+    font-weight: 900;
     color: #000000 !important;
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
+/* FILTRE */
+#filtre {
+    padding: 1vh 1vw;
+    overflow-y: visible;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+#filtre h3 {
+    margin: 0 0 1vh 0;
+    color: #2b4113;
+    font-size: 2vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.2vh solid #829633;
+}
+
+#filtre form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.espece-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.5vh;
+    margin-bottom: 0.5vh;
+    padding: 0.5vh 0.5vw;
+    border-radius: 0.4vh;
+    transition: background-color 0.3s ease;
+}
+
+.espece-label:hover {
+    background-color: #f0f0f0;
+}
+
+.espece-text {
+    font-weight: normal;
+    color: #000;
+}
+
+.espece-text.espece-item {
+    font-size: 1.15rem;
+}
+
+.espece-check {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 2vh;
+    height: 2vh;
+    border: 0.1vh solid #4a4a4a;
+    border-radius: 0.4vh;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.espece-check:checked {
+    background-color: #000 !important;
+    border-color: #000 !important;
+}
+
+.espece-check:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.2vh;
+    font-weight: 900;
+    line-height: 1;
+}
+
 /* ZONE DES PLANTES */
 #plantes {
     background: #f5f5f5 !important;
-    padding: 1.25% !important;
+    padding: 2vh 2vw !important;
     overflow-y: auto !important;
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 1% !important;
+    gap: 1vw !important;
     align-content: flex-start !important;
 }
 
 /* CARTE INDIVIDUELLE */
 div.plante-card {
-    width: calc(20% - 1%) !important;
-    min-width: 11.25% !important;
+    width: calc(20vw - 1vw) !important;
+    min-width: 15vw !important;
     background-color: white !important;
-    border: 0.125% solid #ddd !important;
-    border-radius: 0.5% !important;
+    border: 0.1vh solid #ddd !important;
+    border-radius: 1vh !important;
     overflow: hidden !important;
-    box-shadow: 0 0.125% 0.5% rgba(0,0,0,0.1) !important;
+    box-shadow: 0 0.2vh 0.6vh rgba(0,0,0,0.1) !important;
     display: flex !important;
     flex-direction: column !important;
 }
 
 div.plante-card:hover {
-    box-shadow: 0 0.25% 0.75% rgba(0,0,0,0.2) !important;
-    transform: translateY(-0.2%);
+    box-shadow: 0 0.4vh 1vh rgba(0,0,0,0.2) !important;
+    transform: translateY(-0.2vh);
     transition: all 0.3s;
 }
 
@@ -90,12 +184,12 @@ img.plante-image {
     height: auto !important;
     object-fit: cover !important;
     display: block !important;
-    border-bottom: 0.125% solid #eee !important;
+    border-bottom: 0.1vh solid #eee !important;
 }
 
 /* INFOS */
 div.plante-info {
-    padding: 0.75% !important;
+    padding: 1vh 1vw !important;
     background: white !important;
     display: flex !important;
     flex-direction: column !important;
@@ -103,16 +197,16 @@ div.plante-info {
 }
 
 h3.plante-nom {
-    font-size: 68.75% !important;
+    font-size: 2vh !important;
     font-weight: bold !important;
     color: #2b4113 !important;
-    margin: 0 0 0.5% 0 !important;
+    margin: 0 0 0.5vh 0 !important;
 }
 
 p.plante-espece {
-    font-size: 53.125% !important;
+    font-size: 1.5vh !important;
     color: #666 !important;
-    margin: 0 0 0.5% 0 !important;
+    margin: 0 0 0.5vh 0 !important;
 }
 
 p.plante-espece strong {
@@ -120,23 +214,23 @@ p.plante-espece strong {
 }
 
 p.plante-description {
-    font-size: 50% !important;
+    font-size: 1.3vh !important;
     color: #555 !important;
     line-height: 1.3 !important;
-    margin: 0 0 0.625% 0 !important;
+    margin: 0 0 1vh 0 !important;
 }
 
 /* BOUTON */
 a.btn-voir-details {
     display: block !important;
     width: 100% !important;
-    padding: 0.5% 0 !important;
+    padding: 1vh 0 !important;
     background: #829633 !important;
     color: white !important;
     text-decoration: none !important;
     text-align: center !important;
-    border-radius: 0.25% !important;
-    font-size: 53.125% !important;
+    border-radius: 0.5vh !important;
+    font-size: 1.4vh !important;
     font-weight: 600 !important;
     box-sizing: border-box !important;
     margin-top: auto !important;
@@ -146,11 +240,143 @@ a.btn-voir-details:hover {
     background: #2b4113 !important;
 }
 
+/* Plante Card Inline Styling Cleanup */
+.plante-card-wrapper {
+    width: calc(20% - 0.8rem) !important;
+    flex-basis: calc(20% - 0.8rem) !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    min-height: 22.4% !important;
+    background: white !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
+    border-radius: 0.5rem !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.plante-card-img-container {
+    padding: 0.75rem 1rem 0.5rem 1rem !important;
+    box-sizing: border-box !important;
+}
+
+.plante-card-img {
+    width: 92% !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 0.5rem !important;
+    margin: 0 auto !important;
+}
+
+.plante-card-body {
+    padding: 0.5rem 1rem 0.75rem 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+}
+
+.plante-card-heading {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1.25rem !important;
+    color: #2b4113 !important;
+}
+
+.plante-card-species {
+    margin: 0 0 0.5rem 0 !important;
+    font-size: 1rem !important;
+}
+
+.plante-card-species strong {
+    color: #829633 !important;
+}
+
+.plante-card-text {
+    margin: 0 0 0.65rem 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    color: #555 !important;
+}
+
+.plante-card-btn {
+    display: block !important;
+    padding: 0.5rem !important;
+    background: #829633 !important;
+    color: white !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    margin-top: auto !important;
+}
+
 p.no-plantes {
     width: 100% !important;
     color: #666 !important;
     text-align: center !important;
     padding: 2.5% !important;
+}
+
+/* Recherche Form */
+#recherche {
+    padding: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+#recherche form {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+#recherche input[type="text"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+}
+
+#recherche button[type="submit"] {
+    padding: 0.5rem 1.5rem;
+    background: #829633;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Filtrer Form */
+#filtre form button[type="submit"],
+#filtre form a {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#filtre form button[type="submit"] {
+    background: #829633;
+    color: white;
+    width: 100%;
+}
+
+#filtre form a {
+    display: block;
+    background: #ccc;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
 }
   
 

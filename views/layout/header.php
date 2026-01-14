@@ -1,5 +1,5 @@
-<header class="navbar" style="padding-right: 0.5%;"> 
-    <a href="index.php" style="text-decoration: none; color: inherit;">
+<header class="navbar"> 
+    <a href="index.php" class="navbar-logo-link">
         <div class="logo">
             <img src="./public/image/logo.png" alt="Logo">
             <div class="logo-text">
@@ -17,7 +17,7 @@
     <nav>
         <!-- Menu déroulant Accueil -->
         <div class="dropdown">
-            <a href="index.php" class="dropdown-btn" style="text-decoration: none;">
+            <a href="index.php" class="dropdown-btn">
                 Accueil <span class="arrow">▼</span>
             </a>
             <div class="dropdown-menu">

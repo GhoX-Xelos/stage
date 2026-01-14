@@ -146,20 +146,18 @@
     color: #72be46;
 }
 
-.back-button {
+.back-button,
+.back-link {
     display: inline-block;
-    margin-bottom: 1.25%;
-    padding: 0.625% 0.9375%;
-    background-color: #f0f0f0;
-    color: #333;
+    margin-bottom: 1.1%;
+    color: #2b4113;
     text-decoration: none;
-    border-radius: 0.25rem;
     font-weight: 600;
-    transition: background-color 0.2s ease;
 }
 
-.back-button:hover {
-    background-color: #e0e0e0;
+.back-button:hover,
+.back-link:hover {
+    color: #5a7d2d;
 }
 
 footer {

@@ -33,21 +33,22 @@
             <a href="index.php?controleur=plante&action=index" class="carousel-btn">Découvrir nos plantes</a>
         </div>
     </div>
-    <div class="block" id="presentation">
-        <div class="presentation-content">
-            <img src="./public/image/plante1.png" alt="Plante" class="presentation-img">
-            <div class="presentation-text">
-                <h2>À propos de Niak Niak Kadric</h2>
-                <p>
-                    Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. 
-                    Passionnés par les plantes exotiques, nous nous engageons à offrir à nos clients une large 
-                    sélection de plantes atypiques encore peu présentes en France. Notre entreprise vous accompagne dans l'acquisition de nos plantes
-                    ainsi que dans leurs entretiens grâce à nos méthodes d'entretiens. 
-                </p>
+    <div class="content-row">
+        <div class="block" id="presentation">
+            <div class="presentation-content">
+                <img src="./public/image/plante1.png" alt="Plante" class="presentation-img">
+                <div class="presentation-text">
+                    <h2>À propos de Niak Niak Kadric</h2>
+                    <p>
+                        Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. 
+                        Passionnés par les plantes exotiques, nous nous engageons à offrir à nos clients une large 
+                        sélection de plantes atypiques encore peu présentes en France. Notre entreprise vous accompagne dans l'acquisition de nos plantes
+                        ainsi que dans leurs entretiens grâce à nos méthodes d'entretiens. 
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="block" id="objectif">
+        <div class="block" id="objectif">
         <div class="objectif-img-wrapper">
             <img src="./public/image/accueil/plante-accueil1.jpg" alt="Objectifs" class="objectif-img">
             <h2>Nos<br>Objectifs</h2>
@@ -62,6 +63,7 @@
                 <p>Votre texte ici...</p>
             </div>
         </div>
+    </div>
     </div>
 </section>
 

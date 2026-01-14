@@ -1,43 +1,159 @@
-    .grid6 {
-    display: grid;
-    min-height: calc(100vh - 100px);
+.grid6 {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
     width: 100%;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      "informations formulaire"; 
-    gap: 1% 1%;
-    padding: 1% 1% 0 1%;
+    gap: 2vw;
+    padding: 1vh 1vw;
+    margin-bottom: 0;
     box-sizing: border-box;
-    margin-bottom: 1%;
-    margin-top: 0%;
+}
+
+.grid6 #informations {
+    width: 25vw;
+}
+
+.grid6 #formulaire {
+    width: 75vw;
 }
 
 #titre-contact { 
-    grid-area: titre-contact; 
     background: #ffffff !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1%;
+    padding: 1vh 1vw;
 }
 
 #informations { 
-    grid-area: informations;
     background: #212529 !important;
-    padding: 2%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2vh 2vw;
+    box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#formulaire { 
-    grid-area: formulaire;
-    background: #ffffff !important;
-    padding: 2%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+#informations h2 {
+    font-size: 2.5vh;
+    color: #ffffff;
+    margin-bottom: 3vh;
+}
+
+#informations h3 {
+    font-size: 1.8vh;
+    color: #ffffff;
+    margin-bottom: 2vh;
+}
+
+#informations .contact-section {
+    margin-bottom: 4vh;
+}
+
+#informations .contact-info p {
+    margin: 1.5vh 0;
+    font-size: 1.5vh;
+    color: #f8f9fa;
+}
+
+#informations .reseaux-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+#informations .reseau-link {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1vh 1vw;
+    border-radius: 0.5vh;
+    transition: background-color 0.3s;
+}
+
+#informations .reseau-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#informations .reseau-link img {
+    width: 2vw;
+    height: 2vw;
+    filter: brightness(0) invert(1);
+}
+
+#formulaire {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulaire-content {
+    padding: 1.5rem;
+}
+
+#formulaire h1 {
+    margin: 0 0 30px 0;
+    font-size: 3rem;
+    color: #2b4113;
+    font-weight: 900;
+    text-align: center;
+}
+
+#formulaire h2 {
+    font-size: 1.8rem;
+    color: #2b4113;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#formulaire form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formulaire-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#formulaire label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+#formulaire input[type="text"],
+#formulaire input[type="email"],
+#formulaire textarea {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#formulaire textarea {
+    resize: vertical;
+}
+
+#formulaire button[type="submit"] {
+    padding: 12px 30px;
+    background: #829633;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.3s ease;
 }
 
 :root{
