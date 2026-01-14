@@ -5,6 +5,7 @@
     <title>Niak Niak Kadric</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="./public/css/reset.css?v=<?= time() ?>">
     <link rel="stylesheet" href="./public/css/style.css?v=<?= time() ?>">
     <link rel="stylesheet" href="./public/css/accueil.css?v=<?= time() ?>">
     <link rel="stylesheet" href="./public/css/favoris.css?v=<?= time() ?>">

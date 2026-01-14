@@ -1,8 +1,7 @@
 .grid1 {
     display: grid;
     width: 100%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1f        grid-template-rows: auto auto;
         grid-template-areas:
             "carrousel carrousel"
             "presentation objectif"; 
@@ -289,4 +288,32 @@
     border-radius: var(--main-radius);
     padding: var(--main-padding);
     color: white;
+: 0;
+        flex-shrink: 0;
+    }
+    
+    .presentation-text {
+        margin-right: 0;
+        gap: 0.5rem;
+        flex: 1;
+    }
+    
+    .presentation-text h2 {
+        font-size: 1.1rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .presentation-text p {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-btn {
+        padding: 0.75% 2%;
+        font-size: 0.9rem;
+    }
 }
