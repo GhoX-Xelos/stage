@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 // Récupération des plantes depuis la base de données
 require_once __DIR__ . '/../../models/Database.php';
 

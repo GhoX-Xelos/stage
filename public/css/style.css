@@ -198,6 +198,7 @@ main {
     margin-left: 0;
     transition: color 0.2s ease;
     letter-spacing: 0.05rem;
+    text-decoration: none;
 }
 
 .dropdown-btn:hover {
@@ -447,6 +448,28 @@ main {
 }
 
 /* Footer Styles */
+footer {
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+}
+
 footer .hover-social {
     transition: all 0.3s ease;
 }

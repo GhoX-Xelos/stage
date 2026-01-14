@@ -27,11 +27,11 @@ $reseaux = $stmtReseaux->fetchAll();
 ?>
 
 <footer class="bg-dark text-light mt-0">
-  <div class="container py-4">
-    <div class="row">
+  <div class="footer-container">
+    <div class="footer-content">
 
       <!-- Navigation -->
-      <div class="col-md-4 mb-3">
+      <div class="footer-section">
         <h5>Navigation</h5>
         <ul class="list-unstyled">
           <li><a href="index.php" class="text-light text-decoration-none nav-footer-link">Accueil</a></li>
@@ -43,7 +43,7 @@ $reseaux = $stmtReseaux->fetchAll();
       </div>
 
       <!-- Reseaux -->
-      <div class="col-md-4 mb-3">
+      <div class="footer-section">
         <h5>Nos Réseaux</h5>
         <div class="d-flex flex-column gap-2">
           <?php 
@@ -64,7 +64,7 @@ $reseaux = $stmtReseaux->fetchAll();
       </div>
 
       <!-- Contact -->
-      <div class="col-md-4 mb-3">
+      <div class="footer-section">
         <h5>Nous contacter</h5>
         <div class="d-flex flex-column gap-3">
           <?php if ($entreprise): ?>

@@ -1,10 +1,9 @@
 .grid1 {
     display: flex;
     flex-direction: column;
-    height: 95vh;
     width: 100%;
-    gap: 0.5vh;
-    padding: 1vh 1vw;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
     margin-bottom: 0;
     box-sizing: border-box;
 }
@@ -12,20 +11,16 @@
 .grid1 .content-row {
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    gap: 2rem;
     flex: 1;
 }
 
 .grid1 #carrousel {
-    margin: 0 -2% -2% -2%;
-    width: 100vw;
+    margin: 0 -2rem 0 -2rem;
+    width: calc(100% + 4rem);
     position: relative;
     height: 280px;
-    max-height: 280px;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    flex-shrink: 0;
     padding: 0;
 }
 
@@ -105,16 +100,15 @@
 
 /* Section Présentation */
 #presentation { 
-    grid-area: presentation;
     background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3%;
+    padding: 2rem;
     margin: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
-    min-height: 500px;
+    flex: 1;
 }
 
 .presentation-content {
@@ -171,15 +165,14 @@
 
 /* Section Objectifs */
 #objectif { 
-    grid-area: objectif;
     background: transparent;
     display: flex;
     align-items: stretch;
-    gap: 2%;
+    gap: 1rem;
     padding: 0;
     position: relative;
     margin: 0;
-    min-height: 500px;
+    flex: 1;
 }
 
 .objectif-img {
