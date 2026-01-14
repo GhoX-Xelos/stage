@@ -1,16 +1,16 @@
     .grid6 {
     display: grid;
-    height: calc(100% - 5%);
+    min-height: calc(100vh - 100px);
     width: 100%;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
     grid-template-areas:
       "informations formulaire"; 
     gap: 1% 1%;
     padding: 1% 1% 0 1%;
     box-sizing: border-box;
     margin-bottom: 1%;
-    margin-top: 2.5%;
+    margin-top: 0%;
 }
 
 #titre-contact { 
@@ -24,9 +24,12 @@
 
 #informations { 
     grid-area: informations;
-    background: #ffffff !important;
+    background: #212529 !important;
     padding: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #formulaire { 
@@ -34,6 +37,7 @@
     background: #ffffff !important;
     padding: 2%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 :root{
@@ -47,6 +51,45 @@
     padding: var(--main-padding);
     color: white;
   }
+
+/* Typographie agrandie pour la page Contact */
+#formulaire h1 {
+    font-size: 3.6rem !important;
+    font-weight: 900 !important;
+}
+
+#formulaire h2 {
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+}
+
+#formulaire label {
+    font-size: 1.3rem !important;
+}
+
+#formulaire input,
+#formulaire textarea {
+    font-size: 1.2rem !important;
+    padding: 14px !important;
+}
+
+#formulaire button[type="submit"] {
+    font-size: 1.25rem !important;
+    padding: 16px 40px !important;
+}
+
+#informations h2 {
+    font-size: 2.2rem !important;
+}
+
+#informations h3 {
+    font-size: 1.6rem !important;
+}
+
+#informations p,
+#informations a span {
+    font-size: 1.25rem !important;
+}
 
 /* Media Queries pour Responsive */
 @media (max-width: 1400px) {

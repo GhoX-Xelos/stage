@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/reset.css">
-    <link rel="stylesheet" href="./public/css/style.css">
-    <link rel="stylesheet" href="./public/css/plantes.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./public/css/plantes.css?v=<?php echo time(); ?>">
     <title>Nos Plantes</title>
     <style>
         .espece-label {
@@ -56,7 +55,7 @@
 <body>
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
-<section class="grid4" style ="margin-top: 65px;">
+<section class="grid4">
     <div class="block" id="titre-plante" style="background: #ffffff !important; color: #000000 !important; display: flex !important; align-items: center !important; justify-content: center !important;"> 
         <img src="./public/image/plante1.png" alt="Plante" style="height: 60px; width: auto; margin-right: 15px;">
         <h1 style="color: #000000 !important; font-weight: 900 !important; margin: 0;">Nos Plantes</h1>
@@ -113,18 +112,18 @@
                 <div class="plante-card" style="width: calc(20% - 0.8rem); flex-basis: calc(20% - 0.8rem); flex-shrink: 0; flex-grow: 0; min-height: 22.4%; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.15); border-radius: 0.5rem; overflow: hidden; display: flex; flex-direction: column;">
                     <div style="padding: 0.75rem 1rem 0.5rem 1rem; box-sizing: border-box;">
                         <?php if (!empty($plante['image'])): ?>
-                            <img src="./public/image/carousel1/photo3.jpg" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 0.5rem;">
+                            <img src="./public/image/carousel1/photo3.jpg" alt="<?= htmlspecialchars($plante['nom']) ?>" class="plante-image" style="width: 92%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 0.5rem; margin: 0 auto;">
                         <?php else: ?>
-                            <img src="./public/image/carousel1/photo3.jpg" alt="Image non disponible" class="plante-image" style="width: 100%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 0.5rem;">
+                            <img src="./public/image/carousel1/photo3.jpg" alt="Image non disponible" class="plante-image" style="width: 92%; aspect-ratio: 1; object-fit: cover; display: block; border-radius: 0.5rem; margin: 0 auto;">
                         <?php endif; ?>
                     </div>
                     
                     <div class="plante-info" style="padding: 0.5rem 1rem 0.75rem 1rem; display: flex; flex-direction: column; flex: 1;">
-                        <h3 class="plante-nom" style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #2b4113;"><?= htmlspecialchars($plante['nom']) ?></h3>
-                        <p class="plante-espece" style="margin: 0 0 0.5rem 0; font-size: 0.85rem;"><strong style="color: #829633;">Espèce:</strong> <?= htmlspecialchars($plante['espece']) ?></p>
+                        <h3 class="plante-nom" style="margin: 0 0 0.5rem 0; font-size: 1.25rem; color: #2b4113;"><?= htmlspecialchars($plante['nom']) ?></h3>
+                        <p class="plante-espece" style="margin: 0 0 0.5rem 0; font-size: 1rem;"><strong style="color: #829633;">Espèce:</strong> <?= htmlspecialchars($plante['espece']) ?></p>
                         
                         <?php if (!empty($plante['description'])): ?>
-                            <p class="plante-description" style="margin: 0 0 0.65rem 0; font-size: 0.8rem; line-height: 1.3; color: #555;">
+                            <p class="plante-description" style="margin: 0 0 0.65rem 0; font-size: 0.95rem; line-height: 1.5; color: #555;">
                                 <?= htmlspecialchars(substr($plante['description'], 0, 100)) ?>
                                 <?= strlen($plante['description']) > 100 ? '...' : '' ?>
                             </p>
