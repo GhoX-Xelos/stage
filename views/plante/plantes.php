@@ -10,13 +10,15 @@
 <body>
 <?php include __DIR__ . '/../layout/header.php'; ?>
 
-<section class="grid4">
-    <div class="block" id="titre-plante"> 
-        <img src="./public/image/plante1.png" alt="Plante" class="plante-icon-left">
+<section>
+    <div id="titre-plante"> 
+        <img src="./public/image/plante1.png" alt="Plante gauche" class="img-titre-plante img-gauche">
         <h1>Nos Plantes</h1>
-        <img src="./public/image/plante3.png" alt="Plante" class="plante-icon-right">
+        <img src="./public/image/plante3.png" alt="Plante droite" class="img-titre-plante img-droite">
     </div>
-    <div class="block" id="filtre">
+    <div class="plantes-section">
+        <div class="filtres-column">
+            <div class="block" id="filtre">
         <h3>Filtrer par espèce</h3>
         <form method="GET">
             <input type="hidden" name="controleur" value="plante">
@@ -49,17 +51,21 @@
             <?php if (!empty($_GET['espece']) && !in_array('', $_GET['espece'])): ?>
                 <a href="index.php?controleur=plante&action=plantes">Réinitialiser</a>
             <?php endif; ?>
-        </form>
-    </div>
-    <div class="block" id="recherche">
-        <form method="GET">
-            <input type="hidden" name="controleur" value="plante">
-            <input type="hidden" name="action" value="plantes">
-            <input type="text" name="search" placeholder="Rechercher une plante..." value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
-            <button type="submit">Chercher</button>
-        </form>
-    </div>
-    <div id="plantes">
+            </form>
+        </div>
+        </div>
+        
+        <div class="plantes-right-column">
+            <div class="block" id="recherche">
+                <form method="GET">
+                    <input type="hidden" name="controleur" value="plante">
+                    <input type="hidden" name="action" value="plantes">
+                    <input type="text" name="search" placeholder="Rechercher une plante..." value="<?= isset($_GET['search']) ? htmlspecialchars($_GET['search']) : '' ?>">
+                    <button type="submit">Chercher</button>
+                </form>
+            </div>
+            
+            <div id="plantes">
         <?php 
         if (!empty($plantes)): 
         ?>
@@ -93,6 +99,8 @@
         <?php else: ?>
             <p class="no-plantes">Aucune plante disponible pour le moment.</p>
         <?php endif; ?>
+            </div>
+        </div>
     </div>
 </section>
 

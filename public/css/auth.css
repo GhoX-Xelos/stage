@@ -1,99 +1,104 @@
 /* Styles pour les pages de connexion et d'inscription */
 
-/* Styles pour la page de CONNEXION (login) */
-.login-container {
-    max-width: 37.5%;
-    width: 90%;
-    margin: 9.375% auto 15.625% auto;
-    padding: 1.6875%;
-    background: #f9f9f9;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125% 0.625% rgba(0, 0, 0, 0.1);
-}
-
 /* Styles pour la page d'INSCRIPTION (sign in) */
 .register-container {
-    max-width: 37.5%;
+    max-width: 650px;
     width: 90%;
-    margin: 5.625% auto 5.625% auto;
-    padding: 1.6875%;
-    background: #f9f9f9;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.125% 0.625% rgba(0, 0, 0, 0.1);
+    margin: 3rem auto 3rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Styles pour la page de CONNEXION (login) */
+.login-container {
+    max-width: 650px;
+    width: 90%;
+    margin: 6rem auto 10rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .login-container h2,
 .register-container h2 {
-    color: #829633;
+    color: #2b4113;
     text-align: center;
-    margin-bottom: 1%;
-    font-size: 200%;
+    margin-bottom: 2rem;
+    font-size: 2rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 
 .form-group {
-    margin-bottom: 0.875%;
+    margin-bottom: 1.5rem;
 }
 
 .form-row {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 0.9375% !important;
-    margin-bottom: 0.3125% !important;
+    gap: 1rem !important;
+    margin-bottom: 0.5rem !important;
     width: 100% !important;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.375%;
+    margin-bottom: 0.5rem;
     color: #333;
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-group input {
     width: 100%;
-    padding: 0.625%;
-    border: 1px solid #ddd;
-    border-radius: 0.25rem;
-    font-size: 87.5%;
+    padding: 0.875rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
     box-sizing: border-box;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
 }
 
 .form-group input:focus {
     outline: none;
     border-color: #829633;
-    box-shadow: 0 0 0.25% rgba(43, 65, 19, 0.2);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(130, 150, 51, 0.1);
 }
 
 .message {
-    padding: 0.75%;
-    margin-bottom: 1.25%;
-    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
     color: #d32f2f;
     background: #ffebee;
     border-left: 4px solid #d32f2f;
+    font-size: 0.9rem;
 }
 
 .button-group {
     display: flex;
-    gap: 0.625%;
-    margin-bottom: 0.75%;
-    margin-top: 0.9375%;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .button-group button,
 .button-group a {
     flex: 1;
-    padding: 0.5625%;
+    padding: 0.875rem;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 87.5%;
+    font-size: 1rem;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .button-group button {
@@ -102,35 +107,33 @@
 }
 
 .button-group button:hover {
-    background-color: #829633;
+    background-color: #72be46;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(130, 150, 51, 0.3);
 }
 
 .button-group a {
-    background-color: #e0e0e0;
-    color: #333;
+    background-color: #e9ecef;
+    color: #495057;
 }
 
 .button-group a:hover {
-    background-color: #d0d0d0;
+    background-color: #dee2e6;
 }
 
 .signup-link,
 .login-link {
     text-align: center;
-    margin-top: 0.75%;
-    color: #666;
-}
-
-.signup-link {
-    padding-top: 0.625%;
-    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
 }
 
 .signup-link p,
 .login-link p {
-    margin: 0 0 0.625% 0;
+    margin: 0 0 0.5rem 0;
     color: #666;
-    font-size: 87.5%;
+    font-size: 0.95rem;
 }
 
 .signup-link a,
@@ -139,11 +142,13 @@
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
+    font-size: 1rem;
 }
 
 .signup-link a:hover,
 .login-link a:hover {
     color: #72be46;
+    text-decoration: underline;
 }
 
 .back-button,

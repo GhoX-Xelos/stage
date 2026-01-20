@@ -1,51 +1,307 @@
-.grid3 {
+/* Page Entreprise */
+.entreprise-container {
     display: flex;
     flex-direction: column;
-    height: 95vh;
     width: 100%;
-    gap: 2vh;
-    padding: 1vh 1vw;
-    margin-bottom: 0;
+    padding: 2rem 0 2rem 2rem;
+    gap: 2rem;
     box-sizing: border-box;
 }
 
-.grid3 .content-row {
-    display: flex;
-    flex-direction: row;
-    gap: 2vw;
-    flex: 1;
+/* Bannière en haut */
+.entreprise-banner {
+    width: 100%;
+    background-color: #d3d3d3;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0;
+    margin-right: 0;
 }
 
-#titre { 
-    background: #ffffff !important;
+.entreprise-banner h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenu principal en 3 colonnes */
+.entreprise-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Barre verticale */
+.vertical-bar {
+    width: 8px;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    background-color: transparent;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.vertical-bar::before,
+.vertical-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.vertical-bar::before {
+    top: 0;
+}
+
+.vertical-bar::after {
+    bottom: 0;
+}
+
+/* Colonne gauche : Grande image */
+.entreprise-left {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.entreprise-left .main-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background-color: #ccc;
+}
+
+.left-bottom-zone {
+    width: 100%;
+    flex: 1;
+    background-color: #d3d3d3;
+    border-radius: 0.5rem;
+    min-height: 60px;
+}
+
+/* Colonne centrale : Titre + Texte */
+.entreprise-center {
+    flex: 0 1 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.center-header {
+    background-color: #d3d3d3;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.center-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center-text {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-text p {
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Colonne droite : 3 sections */
+.entreprise-right {
+    flex: 1;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.right-section {
+    background-color: #d3d3d3;
+    padding: 3rem 1.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+
+/* Section 1 : Texte simple */
+.text-section {
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1vh 1vw;
 }
 
-#titre h1 {
+.text-section p {
     margin: 0;
-    font-size: 3.5vh;
-    color: #000000;
-    font-weight: 900;
-    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: 700;
 }
 
-#presentation1 { 
-    background: #ffffff !important;
-    padding: 2vh 2vw;
-    box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    color: black !important;
+/* Section 2 : Cartes */
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: stretch;
+}
+
+.cards-section .text-block {
+    background-color: #b8b8b8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-section .text-block p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
     flex: 1;
 }
 
-#presentation1 .presentation-header {
+.card-item {
+    flex: 1;
+    background-color: #fff;
+    border: 2px solid #999;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2vw;
-    margin-bottom: 2vh;
+    gap: 0.75rem;
+}
+
+.card-item img {
+    width: 115%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-color: #ccc;
+    margin-top: -0.8rem;
+}
+
+.card-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #333;
+    text-align: center;
+}
+
+.card-btn {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 70%;
+}
+
+.card-btn:hover {
+    background-color: #b8571a;
+    transform: translateY(-1px);
+}
+
+.card-line {
+    width: 80%;
+    height: 3px;
+    background-color: #ff6347;
+    margin-top: 0.25rem;
+}
+
+/* Section 3 : Texte + Bouton */
+.action-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.action-section p {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.action-btn {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto 0.5rem auto;
+}
+
+.action-btn:hover {
+    background-color: #b8571a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 105, 30, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .entreprise-content {
+        flex-direction: column;
+    }
+    
+    .entreprise-left,
+    .entreprise-right {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .entreprise-left .main-image {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entreprise-container {
+        padding: 1rem;
+    }
+    
+    .cards-grid {
+        flex-direction: column;
+    }
 }
 
 #presentation1 .presentation-header img {

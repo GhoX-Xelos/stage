@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="public/css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  
-
-
 <?php
 // Récupération des informations de contact depuis la base de données
 require_once __DIR__ . '/../../models/Database.php';
@@ -26,7 +13,7 @@ $stmtReseaux = $pdo->query("SELECT * FROM reseaux ORDER BY id");
 $reseaux = $stmtReseaux->fetchAll();
 ?>
 
-<footer class="bg-dark text-light mt-0">
+<footer class="text-light mt-0" style="background-color: #2c2f33 !important; width: 100%; margin: 0; padding: 0; margin-top: 1rem !important;">
   <div class="footer-container">
     <div class="footer-content">
 
@@ -118,6 +105,3 @@ $reseaux = $stmtReseaux->fetchAll();
     });
   });
 </script>
-
-</body>
-</html>

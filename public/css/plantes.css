@@ -1,26 +1,40 @@
-.grid4 {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-    width: 100%;
-    gap: 2vh;
-    padding: 1vh 1vw;
-    margin-bottom: 0;
-    box-sizing: border-box;
-}
-
-.grid4 .content-row {
+.plantes-section {
     display: flex;
     flex-direction: row;
-    gap: 2vw;
-    flex: 1;
+    width: 100%;
+    height: calc(100vh - 5vh);
+    padding: 0 1rem 1rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 2rem;
 }
 
-.grid4 .filtre-column {
-    width: 20vw;
+.filtres-column {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    width: 250px;
+    flex-shrink: 0;
+    height: 100%;
+    margin-left: 0;
+}
+
+.plantes-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    min-height: 0;
+    gap: 1.5rem;
+}
+
+.plantes-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 0;
+    overflow: visible;
 }
 
 :root{
@@ -29,59 +43,77 @@
   }
   
 .block {
-    background:#565656;
+    background:#585858;
     border-radius: var(--main-radius);
     padding: var(--main-padding);
-    color: white;
+    color: rgb(252, 252, 252);
 }
 
-#titre-plante.block {
-    background: #ffffff !important;
-    color: #000000 !important;
-}
-
-/* Titre de la page */
 #titre-plante {
+    width: 420px;
+    max-width: 90vw;
+    margin: 2rem auto 0rem auto; /* réduit l'écart sous le titre */
+    background: #fff;
+    color: #222;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff !important;
+    gap: 1rem;
 }
 
-#titre-plante img.plante-icon-left {
-    height: 6vh;
+.img-titre-plante {
+    height: 2.2rem;
     width: auto;
-    margin-right: 1vw;
+    object-fit: contain;
+    display: block;
+}
+.img-gauche {
+    margin-right: 0;
+}
+.img-droite {
+    margin-left: 0;
 }
 
-#titre-plante img.plante-icon-right {
-    height: 6vh;
-    width: auto;
-    margin-left: 1vw;
+
+#titre-plante::after {
+    display: none;
 }
 
 #titre-plante h1 {
-    font-size: 3vh;
-    font-weight: 900;
-    color: #000000 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 /* FILTRE */
 #filtre {
-    padding: 1vh 1vw;
-    overflow-y: visible;
-    background: #fff !important;
+    width: 250px;
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background: #ffffff !important;
     color: #000 !important;
+    border-radius: 0.5rem 0 0 0.5rem;
+    min-height: 0;
+    margin-left: 0;
 }
 
 #filtre h3 {
-    margin: 0 0 1vh 0;
-    color: #2b4113;
-    font-size: 2vh;
-    padding-bottom: 1vh;
-    border-bottom: 0.2vh solid #829633;
+    margin: 0 0 1rem 0;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #829633;
+    font-weight: 600;
 }
 
 #filtre form {
@@ -150,12 +182,16 @@
 /* ZONE DES PLANTES */
 #plantes {
     background: #f5f5f5 !important;
-    padding: 2vh 2vw !important;
+    padding: 1.5rem !important;
     overflow-y: auto !important;
+    overflow-x: hidden !important;
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 1vw !important;
+    gap: 1rem !important;
     align-content: flex-start !important;
+    border-radius: 0.5rem;
+    flex: 1;
+    min-height: 0;
 }
 
 /* CARTE INDIVIDUELLE */
@@ -242,49 +278,52 @@ a.btn-voir-details:hover {
 
 /* Plante Card Inline Styling Cleanup */
 .plante-card-wrapper {
-    width: calc(20% - 0.8rem) !important;
-    flex-basis: calc(20% - 0.8rem) !important;
-    flex-shrink: 0 !important;
-    flex-grow: 0 !important;
-    min-height: 22.4% !important;
+    width: calc(33.333% - 0.8rem) !important;
+    flex: 0 0 calc(33.333% - 0.8rem) !important;
     background: white !important;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15) !important;
     border-radius: 0.5rem !important;
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
+    transition: all 0.3s ease;
+}
+
+.plante-card-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    transform: translateY(-2px);
 }
 
 .plante-card-img-container {
-    padding: 0.75rem 1rem 0.5rem 1rem !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
 }
 
 .plante-card-img {
-    width: 92% !important;
+    width: calc(100% - 27.218px) !important;
     aspect-ratio: 1 !important;
     object-fit: cover !important;
     display: block !important;
-    border-radius: 0.5rem !important;
-    margin: 0 auto !important;
+    border-radius: 0.4rem !important;
+    margin: 13.609px !important;
 }
 
 .plante-card-body {
-    padding: 0.5rem 1rem 0.75rem 1rem !important;
+    padding: 0.4rem 0.75rem 0.6rem 0.75rem !important;
     display: flex !important;
     flex-direction: column !important;
     flex: 1 !important;
 }
 
 .plante-card-heading {
-    margin: 0 0 0.5rem 0 !important;
-    font-size: 1.25rem !important;
+    margin: 0 0 0.3rem 0 !important;
+    font-size: 1rem !important;
     color: #2b4113 !important;
 }
 
 .plante-card-species {
-    margin: 0 0 0.5rem 0 !important;
-    font-size: 1rem !important;
+    margin: 0 0 0.3rem 0 !important;
+    font-size: 0.85rem !important;
 }
 
 .plante-card-species strong {
@@ -292,21 +331,21 @@ a.btn-voir-details:hover {
 }
 
 .plante-card-text {
-    margin: 0 0 0.65rem 0 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
+    margin: 0 0 0.4rem 0 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
     color: #555 !important;
 }
 
 .plante-card-btn {
     display: block !important;
-    padding: 0.5rem !important;
+    padding: 0.4rem !important;
     background: #829633 !important;
     color: white !important;
     text-decoration: none !important;
     text-align: center !important;
     border-radius: 0.25rem !important;
-    font-size: 0.85rem !important;
+    font-size: 0.75rem !important;
     font-weight: 600 !important;
     margin-top: auto !important;
 }
@@ -320,37 +359,39 @@ p.no-plantes {
 
 /* Recherche Form */
 #recherche {
-    padding: 0 !important;
-    background: transparent !important;
-    color: inherit !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
+    padding: 0.3rem 1.5rem 1rem 1.5rem !important; /* padding-top réduit */
+    background: #fff !important;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 #recherche form {
     width: 100%;
     display: flex;
-    gap: 0.5rem;
+    gap: 0.75rem;
 }
 
 #recherche input[type="text"] {
     flex: 1;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     border: 1px solid #ddd;
     border-radius: 0.25rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 #recherche button[type="submit"] {
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     background: #829633;
     color: white;
     border: none;
     border-radius: 0.25rem;
     cursor: pointer;
     font-weight: 600;
+    font-size: 1rem;
+}
+
+#recherche button[type="submit"]:hover {
+    background: #6b7a2a;
 }
 
 /* Filtrer Form */

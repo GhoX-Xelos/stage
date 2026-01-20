@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créer un compte</title>
     <link rel="stylesheet" href="./public/css/reset.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="./public/css/auth.css?v=<?= time() ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/style.css?v=<?= time() ?>">
-    <link rel="stylesheet" href="./public/css/auth.css?v=<?= time() ?>">
 </head>
 <body>
     <?php include './views/layout/header.php'; ?>
@@ -22,23 +22,6 @@
         <?php endif; ?>
         
         <form method="POST">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input type="text" placeholder="Jacobin" id="nom" name="nom" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" placeholder="Jean" id="prenom" name="prenom" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="tel">Numéro de téléphone</label>
-                <input type="tel" placeholder="01 01 01 01 01" id="tel" name="tel" required>
-            </div>
-
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" placeholder="plante@gmail.com" id="email" name="email" required>

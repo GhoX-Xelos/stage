@@ -56,11 +56,18 @@
         <div class="objectif-content">
             <div class="objectif-item">
                 <h3>Objectif 1</h3>
-                <p>Votre texte ici...</p>
+                <p>Notre première objectif est d'ouvrir une pépinière. Cela nous permettra de créer,
+                    de cultiver et de vendre nos plantes localement en vous offrant un service client
+                    toujours plus personnalisé et de qualité.
+
+                </p>
             </div>
             <div class="objectif-item">
                 <h3>Objectif 2</h3>
-                <p>Votre texte ici...</p>
+                <p>Notre deuxième objectif est de pouvoir participer à plusieurs évènements tel que des expositions ou 
+                    des salons spécialisés. Nous souhaitons y compris pouvoir participer à des marchés 
+                    afin de pouvoir faire découvrir nos plantes à un plus large public.
+                </p>
             </div>
         </div>
     </div>
