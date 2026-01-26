@@ -40,7 +40,7 @@
                 <div class="presentation-text">
                     <h2>À propos de Niak Niak Kadric</h2>
                     <p>
-                        Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. 
+                        Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores et de tourbières. 
                         Passionnés par les plantes exotiques, nous nous engageons à offrir à nos clients une large 
                         sélection de plantes atypiques encore peu présentes en France. Notre entreprise vous accompagne dans l'acquisition de nos plantes
                         ainsi que dans leurs entretiens grâce à nos méthodes d'entretiens. 
@@ -65,7 +65,7 @@
             <div class="objectif-item">
                 <h3>Objectif 2</h3>
                 <p>Notre deuxième objectif est de pouvoir participer à plusieurs évènements tel que des expositions ou 
-                    des salons spécialisés. Nous souhaitons y compris pouvoir participer à des marchés 
+                    des salons spécialisés. Nous souhaitons y compris développer notre présence sur les marchés 
                     afin de pouvoir faire découvrir nos plantes à un plus large public.
                 </p>
             </div>
