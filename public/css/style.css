@@ -35,7 +35,7 @@ html {
 
 body {
     margin: 0;
-    padding-top: 5vh;
+    padding-top: 64px; /* hauteur du header (navbar) ajustée */
     font-family: Arial, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -481,51 +481,54 @@ main {
 }
 
 footer {
-    width: 100%;
+    width: 100% !important;
+    color: #fff !important;
 }
 
 .footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 3rem 2rem 1.5rem 2rem;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 3rem 2rem 1.5rem 2rem !important;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 4rem;
-    margin-bottom: 2rem;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 4rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .footer-section {
-    flex: 1;
+    flex: 1 !important;
+    color: #fff !important;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
 }
 
 footer .hover-social {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease !important;
 }
 
 footer .hover-social:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: translateX(5px) !important;
 }
 
 footer .nav-footer-link {
-    display: inline-block;
-    padding: 0.3rem 0;
-    position: relative;
-    transition: all 0.3s ease;
+    display: inline-block !important;
+    padding: 0.3rem 0 !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    color: #fff !important;
 }
 
 footer .nav-footer-link::after {
@@ -541,7 +544,7 @@ footer .nav-footer-link::after {
 
 footer .nav-footer-link:hover {
     color: #ffffff !important;
-    padding-left: 0.5rem;
+    padding-left: 0.5rem !important;
 }
 
 footer .nav-footer-link:hover::after {
@@ -549,9 +552,10 @@ footer .nav-footer-link:hover::after {
 }
 
 footer h5 {
-    position: relative;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    position: relative !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    color: #fff !important;
 }
 
 footer h5::after {

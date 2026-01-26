@@ -6,6 +6,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./public/css/reset.css?v=<?= time() ?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/style.css?v=<?= time() ?>">
     <link rel="stylesheet" href="./public/css/accueil.css?v=<?= time() ?>">
     <link rel="stylesheet" href="./public/css/favoris.css?v=<?= time() ?>">
