@@ -9,13 +9,12 @@
         <!-- Colonne gauche : Grande image -->
         <div class="entreprise-left">
             <img src="./public/image/carousel1/photo3.jpg" alt="Niak Niak Kadric" class="main-image">
-            <div class="left-bottom-zone"></div>
         </div>
         
         <!-- Colonne centrale : Titre + Texte -->
         <div class="entreprise-center">
             <div class="center-header">
-                <h2>Titre</h2>
+                <h2>Notre Entreprise</h2>
             </div>
             <div class="center-text">
                 <p>Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. Passionnés par la nature et l'environnement, nous nous engageons à offrir à nos clients une large sélection de plantes adaptées à tous les espaces et tous les besoins. Notre expertise et notre amour pour le monde végétal nous permettent de vous accompagner dans vos projets de jardinage et de décoration.</p>
@@ -35,7 +34,7 @@
             <!-- Section 2 : 3 cartes -->
             <div class="right-section cards-section">
                 <div class="text-block">
-                    <p>Texte</p>
+                    <p>Nos Plantes</p>
                 </div>
                 <div class="cards-grid">
                     <div class="card-item">
@@ -57,10 +56,12 @@
             </div>
             
             <!-- Section 3 : Texte + Bouton -->
+            <div class="contact-section">
             <div class="right-section action-section">
-                <p>Texte</p>
+                <p>Contactez Nous !</p>
             </div>
-            <button class="action-btn">Bouton</button>
+            <button class="action-btn">Contact</button>
+        </div>
         </div>
     </div>
 </section>

@@ -1,3 +1,16 @@
+/* Ajoute un margin aux cartes du milieu */
+.favoris-cards-grid > .favoris-card:nth-child(3n-1) {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* Ajoute un margin-left à la carte la plus à gauche */
+.favoris-cards-grid > .favoris-card:nth-child(3n-2) {
+    margin-left: 20%;
+}
+/* Ajoute un margin-right à la carte la plus à droite */
+.favoris-cards-grid > .favoris-card:nth-child(3n) {
+    margin-right: 20%;
+}
 /* Container principal Favoris */
 .favoris-container {
     display: flex;
@@ -6,11 +19,14 @@
     padding: 2rem;
     gap: 1.5rem;
     box-sizing: border-box;
+    height: 100vh;
+    background: #273617;
 }
 
 /* En-tête avec titre */
 .favoris-header {
     width: 100%;
+    border: 1;
 }
 
 .favoris-header h1 {
@@ -31,10 +47,24 @@
     position: relative;
 }
 
+.favoris-search-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+    pointer-events: none;
+}
+
 .favoris-search-bar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
 }
 
 .search-text-overlay {
@@ -46,19 +76,21 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Grille de cartes */
 .favoris-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 5rem;
     width: 100%;
 }
 
 /* Carte individuelle */
 .favoris-card {
+        margin-top:10%;
+
     background: white;
     border: 1px solid #ddd;
     border-radius: 0.5rem;
@@ -81,6 +113,7 @@
     border-radius: 0.3rem;
     background-color: #f0f0f0;
     display: block;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
 }
 
 .image-text-below {

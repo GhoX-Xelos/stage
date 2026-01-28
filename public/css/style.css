@@ -40,12 +40,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     width: 100%;
 }
 
 main {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 /* NAVBAR */
@@ -483,6 +482,7 @@ main {
 footer {
     width: 100% !important;
     color: #fff !important;
+    margin-top: auto !important;
 }
 
 .footer-container {
