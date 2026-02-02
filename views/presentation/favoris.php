@@ -9,7 +9,7 @@ $stmt = $pdo->query("SELECT * FROM plante LIMIT 3");
 $plantes = $stmt->fetchAll();
 ?>
 
-<section class="favoris-container">    
+<section class="favoris-container" id="favoris">    
     <div class="favoris-search-bar">
         <img src="./public/image/carousel1/photo3.jpg" alt="Barre de recherche">
         <div class="search-text-overlay">Nos favoris</div>

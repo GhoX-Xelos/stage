@@ -19,7 +19,7 @@
     padding: 2rem;
     gap: 1.5rem;
     box-sizing: border-box;
-    height: 100vh;
+    height: 90vh;
     background: #273617;
 }
 
@@ -89,8 +89,7 @@
 
 /* Carte individuelle */
 .favoris-card {
-        margin-top:10%;
-
+    margin-top:10%;
     background: white;
     border: 1px solid #ddd;
     border-radius: 0.5rem;
@@ -98,17 +97,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     gap: 0.8rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .favoris-card-image-wrapper {
     width: 100%;
+    height: 100%;
 }
 
 .favoris-card img {
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
     border-radius: 0.3rem;
     background-color: #f0f0f0;
