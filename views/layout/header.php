@@ -21,8 +21,9 @@
                 Accueil <span class="arrow">▼</span>
             </a>
             <div class="dropdown-menu">
-                <a href="./views/presentation/entreprise.php">Entreprise</a>
-                <a href="./views/presentation/favoris.php">Favoris</a>
+                <a href="index.php#favoris">Favoris</a>
+                <a href="index.php#entreprise">Entreprise</a>
+
             </div>
         </div>
 
@@ -62,5 +63,29 @@
     // Fermer le menu quand la souris quitte toute la zone
     dropdown.addEventListener('mouseleave', function () {
         this.classList.remove('active');
+    });
+
+    // Scroll centré pour les ancres #entreprise et #favoris
+    document.querySelectorAll('a[href="index.php#entreprise"], a[href="index.php#favoris"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const hash = this.getAttribute('href').split('#')[1];
+            const target = document.getElementById(hash);
+            if (target) {
+                e.preventDefault();
+                const rect = target.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const offset = rect.top + scrollTop;
+                let center = offset - (window.innerHeight/2) + (target.offsetHeight/2);
+                    // Décalage spécifique pour chaque ancre
+                    if (hash === 'favoris') {
+                        center -= 32;
+                    } else if (hash === 'entreprise') {
+                        center -= 28;
+                    }
+                window.scrollTo({ top: center, behavior: 'smooth' });
+                // Met à jour l'URL sans recharger
+                history.replaceState(null, '', 'index.php#' + hash);
+            }
+        });
     });
 </script>

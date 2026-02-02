@@ -1,4 +1,4 @@
-<section class="entreprise-container">
+<section class="entreprise-container" id="entreprise">
     <!-- Bannière en haut -->
     <div class="entreprise-banner">
         <h1>Qui sommes-nous ?</h1>
