@@ -68,7 +68,7 @@
 }
 
 .img-titre-plante {
-    height: 2.2rem;
+    height: 1.5rem;
     width: auto;
     object-fit: contain;
     display: block;
@@ -217,8 +217,9 @@ div.plante-card:hover {
 /* IMAGE */
 img.plante-image {
     width: 100% !important;
-    aspect-ratio: 1 / 1 !important;
-    height: auto !important;
+    aspect-ratio: 1.5 / 1 !important;
+    height: 8vh !important;
+    max-height: 8vh !important;
     object-fit: cover !important;
     display: block !important;
     border-bottom: 0.1vh solid #eee !important;
@@ -234,14 +235,15 @@ div.plante-info {
 }
 
 h3.plante-nom {
-    font-size: 2vh !important;
+    font-size: 2.8vh !important;
     font-weight: bold !important;
     color: #2b4113 !important;
-    margin: 0 0 0.5vh 0 !important;
+    margin: 0 0 0.7vh 0 !important;
+    letter-spacing: 0.02em !important;
 }
 
 p.plante-espece {
-    font-size: 1.5vh !important;
+    font-size: 3vh !important;
     color: #666 !important;
     margin: 0 0 0.5vh 0 !important;
 }
@@ -251,7 +253,7 @@ p.plante-espece strong {
 }
 
 p.plante-description {
-    font-size: 1.3vh !important;
+    font-size: 1.7vh !important;
     color: #555 !important;
     line-height: 1.3 !important;
     margin: 0 0 1vh 0 !important;
@@ -307,6 +309,7 @@ a.btn-voir-details:hover {
     display: block !important;
     border-radius: 0.4rem !important;
     margin: 13.609px !important;
+    height: 30vh;
 }
 
 .plante-card-body {
@@ -318,13 +321,13 @@ a.btn-voir-details:hover {
 
 .plante-card-heading {
     margin: 0 0 0.3rem 0 !important;
-    font-size: 1rem !important;
+    font-size: 1.3rem !important;
     color: #2b4113 !important;
 }
 
 .plante-card-species {
     margin: 0 0 0.3rem 0 !important;
-    font-size: 0.85rem !important;
+    font-size: 1rem !important;
 }
 
 .plante-card-species strong {
@@ -333,7 +336,7 @@ a.btn-voir-details:hover {
 
 .plante-card-text {
     margin: 0 0 0.4rem 0 !important;
-    font-size: 0.8rem !important;
+    font-size: 1rem !important;
     line-height: 1.4 !important;
     color: #555 !important;
 }
@@ -346,7 +349,7 @@ a.btn-voir-details:hover {
     text-decoration: none !important;
     text-align: center !important;
     border-radius: 0.25rem !important;
-    font-size: 0.75rem !important;
+    font-size: 1rem !important;
     font-weight: 600 !important;
     margin-top: auto !important;
 }
@@ -611,6 +614,7 @@ p.no-plantes {
     img.plante-image {
         aspect-ratio: 1 / 1 !important;
         height: auto !important;
+        max-height: none !important;
     }
     
     #titre-plante h1 {
@@ -633,6 +637,7 @@ p.no-plantes {
     img.plante-image {
         aspect-ratio: 1 / 1 !important;
         height: auto !important;
+        max-height: none !important;
     }
     
     div.plante-info {
@@ -670,6 +675,7 @@ p.no-plantes {
     img.plante-image {
         aspect-ratio: 1 / 1 !important;
         height: auto !important;
+        max-height: none !important;
     }
     
     div.plante-info {
