@@ -11,97 +11,102 @@
 <body>
 <?php 
 include __DIR__ . '/../layout/header.php';
+// Affichage du message d'envoi si présent
+if (isset($message_envoi)) {
+    echo $message_envoi;
+}
 
 // Récupération des informations de contact depuis la base de données
 require_once __DIR__ . '/../../models/Database.php';
 
+
 $db = Database::getInstance();
 $pdo = $db->getConnection();
 
+// Récupération des informations de l'entreprise
 $stmt = $pdo->query("SELECT * FROM entreprise WHERE id = 1");
-$entreprise = $stmt->fetch();
+$entreprise = $stmt ? $stmt->fetch() : null;
 
 // Récupération des réseaux sociaux
 $stmtReseaux = $pdo->query("SELECT * FROM reseaux ORDER BY id");
-$reseaux = $stmtReseaux->fetchAll();
+$reseaux = $stmtReseaux ? $stmtReseaux->fetchAll() : [];
 ?>
-    <section class="grid6">
-        <div class="block" id="informations">
-            <h2>Nos Informations</h2>
-            
-            <div class="contact-section">
-                <h3>Nous contacter</h3>
-                <div class="contact-info">
-                    <?php if ($entreprise): ?>
-                        <p>📍 <?php echo trim(htmlspecialchars($entreprise['adresse'])) . ', ' . htmlspecialchars($entreprise['ville']) . ' ' . htmlspecialchars($entreprise['postal']); ?></p>
-                        <p>📧 <?php echo htmlspecialchars($entreprise['email']); ?></p>
-                        <p>📞 <?php echo htmlspecialchars($entreprise['tel']); ?></p>
-                    <?php else: ?>
-                        <p>📍 Informations non disponibles</p>
-                        <p>📧 Informations non disponibles</p>
-                        <p>📞 Informations non disponibles</p>
-                    <?php endif; ?>
-                </div>
-            </div>
-            
-            <div>
-                <h3>Nos Réseaux</h3>
-                <div class="reseaux-container">
-                    <?php 
-                    $icones = [
-                        'icons8-facebook.svg',
-                        'icons8-instagram.svg', 
-                        'icons8-tiktok.svg'
-                    ];
-                    
-                    foreach ($reseaux as $index => $reseau): 
-                    ?>
-                        <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="reseau-link">
-                            <img src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>">
-                            <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
-                        </a>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-        <div class="block" id="formulaire">
-            <div id="formulaire-content">
-                <h1>Contact</h1>
-                <h2>Envoyez-nous un message</h2>
-                
-                <form method="POST" action="index.php?controleur=contact&action=envoyer">
-                    <div id="formulaire-columns">
-                        <div>
-                            <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" required>
-                        </div>
-                        <div>
-                            <label for="prenom">Prénom</label>
-                            <input type="text" id="prenom" name="prenom" required>
-                        </div>
-                    </div>
-                    
+
+    <section id="contact-layout">
+        <div id="contact-row">
+            <div id="contact-bande">
+                <div class="contact-infos">
+                    <h3>Nos Informations</h3>
                     <div>
-                        <label for="email">Email</label>
+                        <?php if ($entreprise): ?>
+                            <p>📍 <?php echo trim(htmlspecialchars($entreprise['adresse'])) . ', ' . htmlspecialchars($entreprise['ville']) . ' ' . htmlspecialchars($entreprise['postal']); ?></p>
+                            <p>📧 <?php echo htmlspecialchars($entreprise['email']); ?></p>
+                            <p>📞 <?php echo htmlspecialchars($entreprise['tel']); ?></p>
+                        <?php else: ?>
+                            <p>📍 Informations non disponibles</p>
+                            <p>📧 Informations non disponibles</p>
+                            <p>📞 Informations non disponibles</p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="contact-reseaux">
+                    <h3>Nos Réseaux</h3>
+                    <div class="reseaux-list">
+                        <?php 
+                        $icones = [
+                            'icons8-facebook.svg',
+                            'icons8-instagram.svg', 
+                            'icons8-tiktok.svg'
+                        ];
+                        foreach ($reseaux as $index => $reseau): 
+                        ?>
+                            <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="reseau-link">
+                                <img src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>" class="reseau-icon">
+                                <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+            <div id="contact-form-row">
+                <form method="POST" action="https://formspree.io/f/mqebyawo" id="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Mail</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    
-                    <div>
-                        <label for="sujet">Sujet</label>
-                        <input type="text" id="sujet" name="sujet" required>
-                    </div>
-                    
-                    <div>
+                    <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" required rows="3"></textarea>
+                        <textarea id="message" name="message" required rows="6"></textarea>
                     </div>
-                    
-                    <button type="submit">Envoyer</button>
+                    <div class="form-btn-row">
+                        <button type="submit" id="contact-btn">Envoyer</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
     
 <?php include __DIR__ . '/../layout/footer.php'; ?>
+
+<script>
+function resetContactForm() {
+    var form = document.getElementById('contact-form');
+    if(form) form.reset();
+}
+window.addEventListener('DOMContentLoaded', resetContactForm);
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        resetContactForm();
+    }
+});
+</script>
 </body>
 </html>
