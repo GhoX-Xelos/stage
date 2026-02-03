@@ -32,12 +32,11 @@ $stmtReseaux = $pdo->query("SELECT * FROM reseaux ORDER BY id");
 $reseaux = $stmtReseaux ? $stmtReseaux->fetchAll() : [];
 ?>
 
-    <section id="contact-layout">
-        <div id="contact-row">
-            <div id="contact-bande">
-                <div class="contact-infos">
-                    <h3>Nos Informations</h3>
-                    <div>
+    <section class="contact-conteneur">
+        <div class="contact-gauche" id="contact-bande">
+            <div class="contact-infos">
+                <h3>Nos Informations</h3>
+                <div>
                         <?php if ($entreprise): ?>
                             <p>📍 <?php echo trim(htmlspecialchars($entreprise['adresse'])) . ', ' . htmlspecialchars($entreprise['ville']) . ' ' . htmlspecialchars($entreprise['postal']); ?></p>
                             <p>📧 <?php echo htmlspecialchars($entreprise['email']); ?></p>
@@ -49,48 +48,51 @@ $reseaux = $stmtReseaux ? $stmtReseaux->fetchAll() : [];
                         <?php endif; ?>
                     </div>
                 </div>
-                <div class="contact-reseaux">
-                    <h3>Nos Réseaux</h3>
-                    <div class="reseaux-list">
-                        <?php 
-                        $icones = [
-                            'icons8-facebook.svg',
-                            'icons8-instagram.svg', 
-                            'icons8-tiktok.svg'
-                        ];
-                        foreach ($reseaux as $index => $reseau): 
-                        ?>
-                            <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="reseau-link">
-                                <img src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>" class="reseau-icon">
-                                <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
-                            </a>
-                        <?php endforeach; ?>
-                    </div>
+            <div class="contact-reseaux">
+                <h3>Nos Réseaux</h3>
+                <div class="reseaux-list">
+                    <?php 
+                    $icones = [
+                        'icons8-facebook.svg',
+                        'icons8-instagram.svg', 
+                        'icons8-tiktok.svg'
+                    ];
+                    foreach ($reseaux as $index => $reseau): 
+                    ?>
+                        <a href="<?php echo htmlspecialchars($reseau['url']); ?>" target="_blank" class="reseau-link">
+                            <img src="public/image/reseaux/<?php echo $icones[$index]; ?>" alt="<?php echo htmlspecialchars($reseau['nom']); ?>" class="reseau-icon">
+                            <span><?php echo htmlspecialchars($reseau['nom']); ?></span>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
-            <div id="contact-form-row">
-                <form method="POST" action="https://formspree.io/f/mqebyawo" id="contact-form">
-                    <div class="form-group">
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom" name="prenom" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required rows="6"></textarea>
-                    </div>
-                    <div class="form-btn-row">
-                        <button type="submit" id="contact-btn">Envoyer</button>
-                    </div>
-                </form>
+        </div>
+        <div class="contact-droite">
+            <form method="POST" action="https://formspree.io/f/mqebyawo" id="contact-form">
+                <div class="contact-titre" style="text-align:center; margin-bottom:0rem;">
+                    <h2>Contactez Nous !</h2>
+                    <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter en remplissant le formulaire ci-dessous.</p>
+                </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Peters" required>
             </div>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Sophie" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Mail</label>
+                <input type="email" id="email" name="email" placeholder="plante@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message..." required rows="6"></textarea>
+            </div>
+            <div class="form-btn-row">
+                <button type="submit" id="contact-btn">Envoyer</button>
+            </div>
+        </form>
         </div>
     </section>
     
