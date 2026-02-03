@@ -5,8 +5,9 @@ require_once __DIR__ . '/../../models/Database.php';
 $db = Database::getInstance();
 $pdo = $db->getConnection();
 
-$stmt = $pdo->query("SELECT * FROM plante LIMIT 3");
-$plantes = $stmt->fetchAll();
+// Récupérer les favoris avec leur plante associée
+$stmt = $pdo->query("SELECT favoris.id AS favoris_id, plante.* FROM favoris JOIN plante ON favoris.plante_id = plante.id");
+$favoris = $stmt->fetchAll();
 ?>
 
 <section class="favoris-container" id="favoris">    
@@ -17,40 +18,16 @@ $plantes = $stmt->fetchAll();
     
     <!-- Grille de cartes -->
     <div class="favoris-cards-grid">
-        <?php if (isset($plantes[0])): ?>
+        <?php foreach ($favoris as $fav): ?>
         <div class="favoris-card">
             <div class="favoris-card-image-wrapper">
-                <img src="./public/image/carousel1/photo3.jpg" alt="<?= htmlspecialchars($plantes[0]['nom']) ?>">
+                <img src="<?= htmlspecialchars($fav['image']) ?>" alt="<?= htmlspecialchars($fav['nom']) ?>">
             </div>
-            <div class="image-text-below">Espèce</div>
-            <h3>Exemple</h3>
-            <p class="card-text">Texte</p>
+            <div class="image-text-below"><?= htmlspecialchars($fav['espece']) ?></div>
+            <h3><?= htmlspecialchars($fav['nom']) ?></h3>
+            <p class="card-text"><?= htmlspecialchars($fav['description']) ?></p>
             <button class="card-btn">Voir plus</button>
         </div>
-        <?php endif; ?>
-        
-        <?php if (isset($plantes[1])): ?>
-        <div class="favoris-card">
-            <div class="favoris-card-image-wrapper">
-                <img src="./public/image/carousel1/photo2.jpg" alt="<?= htmlspecialchars($plantes[1]['nom']) ?>">
-            </div>
-            <div class="image-text-below">Espèce</div>
-            <h3>Exemple</h3>
-            <p class="card-text">Texte</p>
-            <button class="card-btn">Voir plus</button>
-        </div>
-        <?php endif; ?>
-        
-        <?php if (isset($plantes[2])): ?>
-        <div class="favoris-card">
-            <div class="favoris-card-image-wrapper">
-                <img src="./public/image/carousel1/photo1.jpg" alt="<?= htmlspecialchars($plantes[2]['nom']) ?>">
-            </div>
-            <div class="image-text-below">Espèce</div>
-            <h3>Exemple</h3>
-            <p class="card-text">Texte</p>
-            <button class="card-btn">Voir plus</button>
-        </div>
-        <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </section>
