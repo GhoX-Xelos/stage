@@ -6,8 +6,8 @@ $db = Database::getInstance();
 $pdo = $db->getConnection();
 
 // Récupérer les favoris avec leur plante associée
-$stmt = $pdo->query("SELECT favoris.id AS favoris_id, plante.* FROM favoris JOIN plante ON favoris.plante_id = plante.id");
-$favoris = $stmt->fetchAll();
+// $stmt = $pdo->query("SELECT favoris.id AS favoris_id, plante.* FROM favoris JOIN plante ON favoris.plante_id = plante.id");
+// $favoris = $stmt->fetchAll();
 ?>
 
 <section class="favoris-container" id="favoris">    
@@ -18,7 +18,7 @@ $favoris = $stmt->fetchAll();
     
     <!-- Grille de cartes -->
     <div class="favoris-cards-grid">
-        <?php foreach ($favoris as $fav): ?>
+        <!-- <?php foreach ($favoris as $fav): ?>
         <div class="favoris-card">
             <div class="favoris-card-image-wrapper">
                 <img src="<?= htmlspecialchars($fav['image']) ?>" alt="<?= htmlspecialchars($fav['nom']) ?>">
@@ -28,6 +28,6 @@ $favoris = $stmt->fetchAll();
             <p class="card-text"><?= htmlspecialchars($fav['description']) ?></p>
             <button class="card-btn">Voir plus</button>
         </div>
-        <?php endforeach; ?>
+        <?php endforeach; ?> -->
     </div>
 </section>
