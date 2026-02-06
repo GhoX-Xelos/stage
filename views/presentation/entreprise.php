@@ -13,11 +13,14 @@
         
         <!-- Colonne centrale : Titre + Texte -->
         <div class="entreprise-center">
-            <div class="center-header">
+            <!-- <div class="center-header">
                 <h2>Notre Entreprise</h2>
-            </div>
+            </div> -->
             <div class="center-text">
-                <p>Niak Niak Kadric est une entreprise spécialisée dans la production et la vente de plantes carnivores. Passionnés par la nature et l'environnement, nous nous engageons à offrir à nos clients une large sélection de plantes adaptées à tous les espaces et tous les besoins. Notre expertise et notre amour pour le monde végétal nous permettent de vous accompagner dans vos projets de jardinage et de décoration.</p>
+                <p>NiaK Niak Kadric est une société nouvelle se spécialisant dans la production et dans la vente de plantes exotiques. Notre entreprise met tout en œuvre pour proposer des plantes de qualité avec un service client toujours plus convivial et professionnel.</p>
+                <p>Étant un grand fan de plantes atypiques, je souhaite vous proposer une variété de plantes toujours plus grande. Notre entreprise souhaite fournir nos fleurs en vous donnant un maximum d'informations pour les entretenir.  </p>
+                <div id="patron"><p>Je m’appelle Cédric Fassetta, j’ai 42 ans et je suis passionnée des plantes carnivores. J’ai décidé de changer de vie. J’ai décidé de quitter mon travail en pâtisserie pour me lancer pleinement dans cette activité qui me tient à cœur. Au travers de mes apprentissages dans ce domaine, je souhaite faire découvrir ces plantes encore trop peu connues. En espérant vous rencontrer prochainement sur les marchés. </p> </div>
+    
             </div>
         </div>
         
@@ -28,7 +31,13 @@
         <div class="entreprise-right">
             <!-- Section 1 : Texte -->
             <div class="right-section text-section">
-                <p>Texte</p>
+                
+                <p>Vous pouvez nous retrouver sur ces marchés : </p>
+                <ul>
+                    <li>Marché de fzaiofjoi</li>
+                    <li>Marché de jofefjzeo</li>
+                    <li>Marché de jfsoejfeoi</li>
+                </ul>
             </div>
             
             <!-- Section 2 : 3 cartes -->
@@ -58,7 +67,8 @@
             <!-- Section 3 : Texte + Bouton -->
             <div class="contact-section">
             <div class="right-section action-section">
-                <p>Contactez Nous !</p>
+                <h3>Contactez Nous !</h3>
+                <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter.</p>
             </div>
             <button class="action-btn">Contact</button>
         </div>

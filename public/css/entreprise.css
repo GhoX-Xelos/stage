@@ -12,7 +12,7 @@
 /* Bannière en haut */
 .entreprise-banner {
     width: 100%;
-    background-color: #d3d3d3;
+    background-color: #273617;
     padding: 2rem;
     text-align: center;
     border-radius: 0;
@@ -21,7 +21,7 @@
 .entreprise-banner h1 {
     margin: 0;
     font-size: 2rem;
-    color: #333;
+    color: #f8f3f3;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -95,22 +95,22 @@
     gap: 1rem;
 }
 
-.center-header {
+/* .center-header {
     background-color: #d3d3d3;
     padding: 1rem;
     border-radius: 0.5rem;
-}
+} */
 
-.center-header h2 {
+/* .center-header h2 {
     margin: 0;
     font-size: 1.3rem;
     color: #333;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 .center-text {
     background-color: #f5f5f5;
-    padding: 1.5rem;
+    padding: 3rem;
     border-radius: 0.5rem;
     flex: 1;
     display: flex;
@@ -142,16 +142,40 @@
     min-height: 0;
 }
 
+.right-section.text-section {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80px;
+    height: 12vh;
+    max-height: 180px;
+}
+
+.right-section.text-section p {
+    margin: 0;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.right-section.text-section ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.4rem;
+    list-style: none;
+    padding: 1rem;
+    margin:0;
+    padding-bottom: 0;
+    
+}
+
 /* Section 1 : Texte simple */
 .text-section {
-    min-height: 180px;
-    height: 18vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 80px;
+    height: 12vh;
+    max-height: 180px;
 }
 
 .text-section p {
@@ -270,9 +294,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
     padding: 1rem 1.5rem;
-    margin-top: 0.5rem;
 }
 
 .action-section p {
@@ -304,10 +326,38 @@
 }
 
 .contact-section {
-    background-color: #d3d3d3;
+    /* background-color: #d3d3d3; */
     padding: 1rem;
+    padding-bottom: 0;
     border-radius: 0.5rem 0 0 0.5rem;
     margin-bottom: 0rem;
+}
+
+.contact-section p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-section h3 {
+    font-size: 1.6rem;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.entreprise-center .center-text p {
+    margin: 0;
+    color: #444;
+    font-size: 1.3rem;
+    margin-bottom: 5%;
+    padding:1%;
+}
+
+#patron p {
+    margin-bottom: 0;
 }
 
 /* Responsive */
