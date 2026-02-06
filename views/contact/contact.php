@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./public/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="./public/css/contact.css?v=<?php echo time(); ?>">
     <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php 
@@ -73,13 +74,15 @@ $reseaux = $stmtReseaux ? $stmtReseaux->fetchAll() : [];
                     <h2>Contactez Nous !</h2>
                     <p>Pour toute question ou demande d'information, n'hésitez pas à nous contacter en remplissant le formulaire ci-dessous.</p>
                 </div>
-            <div class="form-group">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Peters" required>
-            </div>
-            <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Sophie" required>
+            <div class="form-nom-prenom-row">
+                <div class="form-col">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Peters" required>
+                </div>
+                <div class="form-col">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Sophie" required>
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Mail</label>
